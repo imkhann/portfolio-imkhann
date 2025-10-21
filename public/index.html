@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio – Imam Muhannad</title>
+  <meta name="description" content="Portofolio Imam Muhannad — Creative Enthusiast & Visual Storyteller dengan fokus pada data, desain, dan implementasi produk digital.">
+  <meta name="theme-color" content="#1F2A36">
+
+  <!-- Fonts & Tailwind -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: { fontFamily: {
+        sans: ["Inter","system-ui","Segoe UI","Roboto","Arial","sans-serif"],
+        heading: ["Montserrat","Inter","system-ui","sans-serif"]
+      } } }
+    };
+  </script>
+
+  <link rel="stylesheet" href="assets/css/global.css">
+  <meta property="og:title" content="Portfolio – Imam Muhannad">
+  <meta property="og:description" content="Creative Enthusiast & Visual Storyteller dengan fokus pada data, desain, dan implementasi produk digital.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/img/hero/imam-standing.png">
+</head>
+<body class="bg-[var(--bg)] text-[var(--text)]">
+
+  <!-- ===== Header ===== -->
+  <header data-site-header class="fixed top-0 left-0 right-0 z-[70] border-b border-[var(--line)] bg-[color:var(--glass)] backdrop-blur-md">
+    <div class="max-w-[1200px] mx-auto h-16 flex items-center gap-3 px-4 lg:px-6">
+      <!-- Logo kiri -->
+      <a href="#home" class="font-heading font-extrabold text-lg leading-none select-none">
+        <span class="logo-animate">IMKHANN.</span>
+      </a>
+
+      <div class="flex-1"></div>
+
+      <!-- Nav desktop -->
+      <nav class="hidden lg:block">
+        <ul class="flex items-center gap-2">
+          <li><a href="#about"        class="nav-btn">Tentang saya</a></li>
+          <li><a href="#skills"       class="nav-btn">Skills</a></li>
+          <li><a href="#portfolio"    class="nav-btn">Portfolio</a></li>
+          <li><a href="#experience"   class="nav-btn">Pengalaman</a></li>
+          <li><a href="#organization" class="nav-btn">Organisasi</a></li>
+          <li><a href="#contact"      class="nav-btn">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Toggle tema (desktop) -->
+      <button id="theme-switch" type="button" role="switch" aria-checked="false"
+              aria-label="Ganti tema"
+              class="hidden lg:inline-flex relative items-center h-7 w-16 rounded-full border border-[var(--line)] bg-[color:var(--switchRail)] focus-ring">
+        <span class="absolute left-2 text-[13px] leading-none select-none">☀️</span>
+        <span class="absolute right-2 text-[13px] leading-none select-none">🌙</span>
+        <span class="knob absolute top-0.5 left-0.5 h-6 w-6 rounded-full bg-white shadow transition-transform will-change-transform"></span>
+      </button>
+
+      <!-- Hamburger (mobile) -->
+      <button id="hamburger" type="button" aria-label="Buka menu" aria-expanded="false"
+              class="ml-2 grid place-items-center lg:hidden w-10 h-10 rounded-md hover:bg-[var(--surface)] focus-ring relative">
+        <span class="ham-line"></span>
+        <span class="ham-line"></span>
+        <span class="ham-line"></span>
+      </button>
+    </div>
+
+    <!-- Drawer Mobile -->
+    <aside id="mobile-drawer" class="fixed inset-0 z-[40] pointer-events-none" aria-hidden="true">
+      <!-- Backdrop mulai di bawah header -->
+      <div class="drawer-backdrop absolute inset-x-0 top-16 bottom-0 bg-transparent opacity-0 transition-opacity z-[41]"></div>
+      <!-- Panel: geser dari kanan, SOLID -->
+      <div class="drawer-panel absolute right-3 top-16 w-[260px] md:w-[320px]
+                rounded-xl shadow-xl border border-[var(--line)]
+                bg-[var(--bg)] z-[55]
+                opacity-0 -translate-y-2 transition-all duration-200">
+        <nav class="px-4 pb-4">
+          <ul class="flex flex-col gap-4 text-[15px]">
+            <li><a class="mobile-link" href="#about">Tentang saya</a></li>
+            <li><a class="mobile-link" href="#skills">Skills</a></li>
+            <li><a class="mobile-link" href="#portfolio">Portfolio</a></li>
+            <li><a class="mobile-link" href="#experience">Pengalaman</a></li>
+            <li><a class="mobile-link" href="#organization">Organisasi</a></li>
+            <li><a class="mobile-link" href="#contact">Contact</a></li>
+          </ul>
+
+          <!-- Toggle tema (mobile) -->
+          <div class="mt-6">
+            <button id="theme-switch-mobile" type="button" role="switch" aria-checked="false"
+                    aria-label="Ganti tema"
+                    class="relative inline-flex items-center h-7 w-16 rounded-full border border-[var(--line)] bg-[color:var(--switchRail)] focus-ring">
+              <span class="absolute left-2 text-[13px] leading-none select-none">☀️</span>
+              <span class="absolute right-2 text-[13px] leading-none select-none">🌙</span>
+              <span class="knob absolute top-0.5 left-0.5 h-6 w-6 rounded-full bg-white shadow transition-transform will-change-transform"></span>
+            </button>
+          </div>
+        </nav>
+      </div>
+    </aside>
+  </header>
+
+  <!-- ===== Main ===== -->
+  <main class="pt-16">
+
+    <!-- Hero -->
+    <section id="home" class="relative overflow-hidden pt-18 lg:pt-16">
+      <div class="container-pro relative">
+        <div class="flex flex-wrap items-center relative z-10">
+          <div class="w-full px-4 lg:w-1/2 self-center">
+            <p class="hero-kicker">Halo <span aria-hidden="true">✋</span>, saya</p>
+            <h1 class="hero-title">Imam Muhannad</h1>
+            <h2 class="hero-sub">Creative Enthusiast • Visual Storyteller</h2>
+            <p class="hero-desc">Menggabungkan desain, video, dan kepekaan data untuk hasil visual yang efektif dan profesional.</p>
+            <a href="#contact" class="btn btn-accent focus-ring">Contact Me</a>
+          </div>
+
+          <div class="w-full px-4 lg:w-1/2 self-end">
+            <div class="relative mt-10 lg:mt-0 flex justify-end">
+              <span class="hero-blob" aria-hidden="true"></span>
+              <img id="hero-img" data-fallback="assets/img/hero/hero-placeholder.png"
+                   src="assets/img/hero/imam-standing.png"
+                   alt="Imam Muhannad"
+                   onerror="this.onerror=null; if(this.dataset.fallback) this.src=this.dataset.fallback;"
+                   class="w-auto h-auto max-h-[360px] md:max-h-[420px] lg:max-h-[460px] object-contain select-none" draggable="false"/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tentang saya -->
+    <section id="about" class="container-pro py-12">
+      <div class="flex items-center gap-2 mb-4">
+        <svg class="w-5 h-5"><circle cx="10" cy="10" r="9" fill="currentColor"/></svg>
+        <h3 class="font-heading text-2xl md:text-3xl font-bold">Tentang saya</h3>
+      </div>
+      <p class="max-w-[80ch] leading-relaxed text-[var(--text)] space-y-4">
+  Ketertarikan saya pada dunia teknologi berawal dari rasa penasaran terhadap aplikasi yang dimodifikasi oleh orang lain. Saya ingin tahu bagaimana sebuah aplikasi bisa diubah tampilannya, fiturnya, bahkan perilakunya sesuai keinginan pengguna. Dari situ saya belajar membongkar struktur kode dan memahami logika di balik pengembangannya. Rasa ingin tahu itu membawa saya mengenal dunia pemrograman web dan membuka jalan saya untuk terus mendalami teknologi.
+  <br><br>
+  Meskipun sempat tidak berada di jurusan yang sesuai, saya tetap mengikuti hobi dan rasa ingin tahu saya melalui kegiatan ekstrakurikuler seperti Arduino, fotografi, dan videografi. Saya belajar banyak tentang cara berpikir sistematis dari dunia elektronika sekaligus mengasah sisi kreatif melalui visual. Kombinasi inilah yang membentuk ketertarikan saya terhadap data dan visual—dua bidang yang kini menjadi fokus saya.
+  <br><br>
+  Saya mengembangkan kemampuan di bidang <strong>analisis data</strong> dan <strong>visualisasi informasi</strong>, menggunakan alat seperti <strong>Tableau</strong>, <strong>Power BI</strong>, <strong>Excel</strong>, dan <strong>Python</strong>. Di sisi lain, pengalaman dalam desain dan video editing membuat saya terbiasa menggabungkan hasil analisis dengan tampilan visual yang menarik dan mudah dipahami. Saya menikmati proses menemukan pola dari data dan menerjemahkannya menjadi informasi yang berguna.
+  <br><br>
+  Dalam setiap pekerjaan atau proyek, saya dikenal sebagai pribadi yang <strong>adaptif, tekun, dan bisa diandalkan</strong>. Saya terbiasa mengisi berbagai peran—baik teknis maupun kreatif—dan menjaga hasil kerja tetap rapi serta konsisten. Saya percaya kemampuan beradaptasi, rasa ingin tahu, dan keinginan untuk terus belajar adalah nilai utama yang saya bawa ke setiap tantangan baru. Portofolio ini menjadi cara saya menunjukkan hasil kerja dan cara berpikir yang saya miliki.
+</p>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="container-pro py-12">
+      <div class="flex items-center justify-between mb-4">
+        <div class="flex items-center gap-2 mb-4">
+          <svg class="w-5 h-5" viewBox="0 0 24 24"><path fill="currentColor" d="M11 7h2v10h-2V7Zm-6 4h2v6H5v-6Zm12-6h2v12h-2V5Z"/></svg>
+          <h3 class="font-heading text-2xl md:text-3xl font-bold">Skills</h3>
+        </div>
+      <a class="btn btn-ghost" href="skills.html">Lihat semua →</a>
+      </div>
+      <div class="grid md:grid-cols-2 gap-4">
+        <article class="card p-4"><h4 class="font-semibold mb-2">Data Analyst</h4><ul class="mt-2 list-disc pl-5 text-sm space-y-1"><li>Tableau</li><li>Power BI</li><li>Excel (Advanced Functions & Pivot)</li><li>Google Sheets</li><li>SQL Database Management</li></ul></article>
+        <article class="card p-4"><h4 class="font-semibold mb-2">Pemrograman</h4><ul class="mt-2 list-disc pl-5 text-sm space-y-1"><li>HTML</li><li>CSS</li><li>PHP</li><li>JavaScript</li><li>TypeScript</li><li>Python</li><li>C++</li><li>SQL</li></ul></article>
+        <article class="card p-4"><h4 class="font-semibold mb-2">Desain, Editing, dan Produksi Visual</h4><ul class="mt-2 list-disc pl-5 text-sm space-y-1"><li>Canva</li><li>Figma</li><li>CorelDRAW</li><li>Adobe Photoshop</li><li>Adobe Premiere</li><li>Capcut</li><li>Photography</li><li>Videography</li></ul></article>
+        <article class="card p-4"><h4 class="font-semibold mb-2">Perangkat Lunak dan Aplikasi Pendukung</h4><ul class="mt-2 list-disc pl-5 text-sm space-y-1"><li>Microsoft Office (Word, Excel, PowerPoint)</li><li>Google Workspace</li><li>OBS Studio</li><li>Prism Live Studio</li></ul></article>
+      </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section id="portfolio" class="container-pro py-12">
+      <div class="flex items-center justify-between mb-4">
+        <div class="flex items-center gap-2">
+          <svg class="w-5 h-5" viewBox="0 0 24 24"><path fill="currentColor" d="M3 7h18v10H3V7Zm4-4h10v2H7V3Z"/></svg>
+          <h3 class="font-heading text-2xl md:text-3xl font-bold">Portfolio</h3>
+        </div>
+        <a class="btn btn-ghost" href="projects.html">Lihat semua →</a>
+      </div>
+      <div id="projects-preview" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+  <!-- 1. Dashboard Anomali Konsumsi Air -->
+  <article class="card p-4">
+    <div class="flex items-center gap-2 text-xs mb-2">
+      <span class="px-2 py-0.5 rounded-full border border-[var(--line)]">Data Analyst</span>
+      <span class="px-2 py-0.5 rounded-full border border-[var(--line)]">Dashboard</span>
+    </div>
+    <h4 class="font-semibold">Dashboard Deteksi Anomali Konsumsi Air</h4>
+    <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">
+      Analisis pola konsumsi air menggunakan algoritma <em>Isolation Forest</em> dan visualisasi interaktif melalui dashboard Business Intelligence.
+    </p>
+  </article>
+
+  <!-- 2. Desain Publikasi & Branding Kampus -->
+  <article class="card p-4">
+    <div class="flex items-center gap-2 text-xs mb-2">
+      <span class="px-2 py-0.5 rounded-full border border-[var(--line)]">Desain</span>
+      <span class="px-2 py-0.5 rounded-full border border-[var(--line)]">Publikasi</span>
+    </div>
+    <h4 class="font-semibold">Desain Publikasi & Branding Kampus</h4>
+    <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">
+      Produksi visual untuk kebutuhan publikasi acara kampus seperti KPUM, LKMM-TM, dan DevClass dengan pendekatan desain komunikatif dan konsisten.
+    </p>
+  </article>
+
+  <!-- 3. Dokumentasi & Editing Video KKN 2024 -->
+  <article class="card p-4">
+    <div class="flex items-center gap-2 text-xs mb-2">
+      <span class="px-2 py-0.5 rounded-full border border-[var(--line)]">Videografi</span>
+      <span class="px-2 py-0.5 rounded-full border border-[var(--line)]">Dokumentasi</span>
+    </div>
+    <h4 class="font-semibold">Dokumentasi & Editing Video KKN 2024</h4>
+    <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">
+      Mengelola proses perekaman dan editing video kegiatan KKN Bolodewo untuk publikasi dan laporan dokumentasi.
+    </p>
+  </article>
+</div>
+    </section>
+
+    <!-- Pengalaman -->
+    <section id="experience" class="container-pro py-12">
+      <div class="flex items-center justify-between mb-4">
+        <div class="flex items-center gap-2 mb-4">
+          <svg class="w-5 h-5" viewBox="0 0 24 24"><path fill="currentColor" d="M7 7h10v10H7z"/></svg>
+        <h3 class="font-heading text-2xl md:text-3xl font-bold">Pengalaman</h3>
+        </div>
+        <a class="btn btn-ghost" href="experience.html">Lihat semua →</a>
+      </div>
+      <div class="grid md:grid-cols-2 gap-4">
+        <article class="card p-4"><h4 class="font-semibold mb-1">Driver</h4><p class="mb-1">Shopee Food</p><p class="text-sm">Januari 2025 – Sekarang</p></article>
+        <article class="card p-4"><h4 class="font-semibold mb-1">Waiter & Kitchen Staff</h4><p class="mb-1">Spesial Soto Boyolali</p><p class="text-sm">Desember 2024 – Sekarang</p></article>
+        <article class="card p-4"><h4 class="font-semibold mb-1">Crew Store</h4><p class="mb-1">Pentol Jeki</p><p class="text-sm">November 2023 – Agustus 2024</p></article>
+        <article class="card p-4"><h4 class="font-semibold mb-1">Administrasi (Magang)</h4><p class="mb-1">Dinas Perhubungan Kota Surabaya</p><p class="text-sm">Mei 2024 – Agustus 2024</p></article>
+      </div>
+    </section>
+
+    <!-- Organisasi -->
+    <section id="organization" class="container-pro py-12">
+      <div class="flex items-center justify-between mb-4">
+        <div class="flex items-center gap-2 mb-4">
+          <svg class="w-5 h-5" viewBox="0 0 24 24"><path fill="currentColor" d="M4 10h6v10H4zM14 4h6v16h-6z"/></svg>
+        <h3 class="font-heading text-2xl md:text-3xl font-bold">Organisasi</h3>
+      </div>
+      <a class="btn btn-ghost" href="organization.html">Lihat semua →</a>
+      </div>
+      <div class="grid md:grid-cols-2 gap-4">
+        <article class="card p-4"><h4 class="font-semibold mb-1">Komisi Pemilihan Umum Mahasiswa (KPUM)</h4><p class="mb-1">Universitas Narotama</p><p class="text-sm">Anggota Divisi Publikasi, Desain dan Dokumentasi</p></article>
+        <article class="card p-4"><h4 class="font-semibold mb-1">Kuliah Kerja Nyata (KKN)</h4><p class="mb-1">Kelompok Bolodewo</p><p class="text-sm">Anggota Divisi Publikasi, Desain dan Dokumentasi</p></article>
+        <article class="card p-4"><h4 class="font-semibold mb-1">DevClass (Langkah Awal Menjadi Web Developer)</h4><p class="mb-1">Himpunan Mahasiswa Ilmu Komputer (HIMA ILKOM)</p><p class="text-sm">Ketua Pelaksana</p></article>
+        <article class="card p-4"><h4 class="font-semibold mb-1">Latihan Keterampilan Manajemen Mahasiswa Tingkat Menengah</h4><p class="mb-1">Universitas Narotama</p><p class="text-sm">Koordinator Divisi Publikasi, Desain dan Dokumentasi</p></article>
+      </div>
+    </section>
+
+    <!-- Pendidikan -->
+    <section id="education" class="container-pro py-12">
+      <div class="flex items-center justify-between mb-4">
+        <div class="flex items-center gap-2 mb-4">
+          <svg class="w-5 h-5" viewBox="0 0 24 24"><path fill="currentColor" d="m12 3 10 6-10 6L2 9l10-6Zm0 8.7 6.5-3.9V14l-6.5 3.9L5.5 14V7.8L12 11.7Z"/></svg>
+        <h3 class="font-heading text-2xl md:text-3xl font-bold">Pendidikan</h3>
+      </div>
+      <a class="btn btn-ghost" href="education.html">Lihat semua →</a>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+  <!-- S1 -->
+  <article class="card p-4">
+    <div class="flex items-start justify-between gap-2">
+      <h4 class="font-semibold">S1 Teknik Informatika</h4>
+      <span class="text-xs px-2 py-0.5 rounded-full border border-[var(--line)]">2021–2025</span>
+    </div>
+    <p class="mb-1">Universitas Narotama</p>
+    <p class="text-sm">IPK 3.77</p>
+  </article>
+
+  <!-- MSIB -->
+  <article class="card p-4">
+    <div class="flex items-start justify-between gap-2">
+      <h4 class="font-semibold">Data Analyst</h4>
+      <span class="text-xs px-2 py-0.5 rounded-full border border-[var(--line)]">2023</span>
+    </div>
+    <p class="mb-1">Karier.mu by Sekolah.mu</p>
+    <p class="mt-1 text-sm">Magang dan Studi Independen Bersertifikat</p>
+  </article>
+
+  <!-- SMK -->
+  <article class="card p-4">
+    <div class="flex items-start justify-between gap-2">
+      <h4 class="font-semibold">Teknik Kimia Industri</h4>
+      <span class="text-xs px-2 py-0.5 rounded-full border border-[var(--line)]">2017–2020</span>
+    </div>
+    <p class="mb-1">SMK Negeri 1 Grati</p>
+    <p class="mt-1 text-sm">Nilai Rata-rata 80.66</p>
+  </article>
+</div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="container-pro py-12">
+      <div class="flex items-center gap-2 mb-4">
+        <svg class="w-5 h-5" viewBox="0 0 24 24"><path fill="currentColor" d="M21 8V7l-3 2-4-3-4 3-4-3-3 2v1l3-2 4 3 4-3 4 3 3-2Z"/></svg>
+        <h3 class="font-heading text-2xl md:text-3xl font-bold">Contact</h3>
+      </div>
+      <div class="grid md:grid-cols-2 gap-4">
+        <form action="https://formspree.io/f/xeorvjbv" method="POST" class="card p-4">
+          <input name="name" type="text" placeholder="Nama" required class="input">
+          <input name="email" type="email" placeholder="Email" required class="input">
+          <textarea name="message" placeholder="Pesan" rows="4" required class="input"></textarea>
+          <button class="btn btn-accent mt-2 w-max">Kirim</button>
+        </form>
+        <div class="card p-4">
+          <p class="text-sm mb-3">Atau langsung terhubung melalui:</p>
+          <div class="flex flex-wrap gap-3">
+            <a class="icon-link" href="https://www.linkedin.com/in/imam-muhannad/" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" class="w-5 h-5"><path fill="currentColor" d="M6.94 7.5H3.75V21h3.19V7.5ZM5.35 3a1.85 1.85 0 1 0 0 3.7 1.85 1.85 0 0 0 0-3.7Zm6.35 6.79H8.57V21h3.13v-6.73c0-1.77 2.31-1.91 2.31 0V21h3.13v-7.81c0-4.06-4.63-3.91-5.52-1.91V9.79Z"/></svg>
+              LinkedIn
+            </a>
+            <a class="icon-link" href="http://instagram.com/imkhann_" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" class="w-5 h-5"><path fill="currentColor" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm5 5.5a5.5 5.5 0 1 0 0 11.01A5.5 5.5 0 0 0 12 7.5Zm0 1.8a3.7 3.7 0 1 1 0 7.4 3.7 3.7 0 0 1 0-7.4ZM18 5.8a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4Z"/></svg>
+              Instagram
+            </a>
+            <a class="icon-link" href="mailto:imammuhannad.gg@gmail.com" aria-label="Email">
+              <svg viewBox="0 0 24 24" class="w-5 h-5"><path fill="currentColor" d="M2 6h20v12H2V6Zm10 6 8-5H4l8 5Z"/></svg>
+              Email
+            </a>
+            <a class="icon-link" href="tel:+6282234899524" aria-label="Telepon">
+              <svg viewBox="0 0 24 24" class="w-5 h-5"><path fill="currentColor" d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1.1-.2 11 11 0 0 0 3.5.6 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 5a1 1 0 0 1 1-1h3.4a1 1 0 0 1 1 1 11 11 0 0 0 .6 3.5 1 1 0 0 1-.2 1.1l-2.2 2.2Z"/></svg>
+              Telepon
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="mt-16 border-t border-[var(--line)]">
+    <div class="container-pro py-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-sm">
+      <p>© 2025 Imam Muhannad.</p>
+      <div class="flex items-center gap-3">
+        <a class="btn btn-ghost" href="https://docs.google.com/document/d/18WYvun2jCcno1KxRFyvMuKTu-eo9_pGTdgtF6Ud9llQ/edit?usp=sharing" target="_blank">Download CV</a>
+        <a class="btn btn-ghost" href="#home">Kembali ke atas</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
