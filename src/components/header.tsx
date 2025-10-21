@@ -13,12 +13,12 @@ export default function Header() {
 
         <nav className="hidden lg:block">
           <ul className="flex items-center gap-2">
-            <li><a href="#about" className="nav-btn">Tentang saya</a></li>
-            <li><a href="#skills" className="nav-btn">Skills</a></li>
-            <li><a href="#portfolio" className="nav-btn">Portfolio</a></li>
-            <li><a href="#experience" className="nav-btn">Pengalaman</a></li>
-            <li><a href="#organization" className="nav-btn">Organisasi</a></li>
-            <li><a href="#contact" className="nav-btn">Contact</a></li>
+            <li><a href="/#about" className="nav-btn">Tentang saya</a></li>
+            <li><a href="/#skills" className="nav-btn">Skills</a></li>
+            <li><a href="/#portfolio" className="nav-btn">Portfolio</a></li>
+            <li><a href="/#experience" className="nav-btn">Pengalaman</a></li>
+            <li><a href="/#organization" className="nav-btn">Organisasi</a></li>
+            <li><a href="/#contact" className="nav-btn">Contact</a></li>
           </ul>
         </nav>
 
@@ -58,12 +58,12 @@ export default function Header() {
         >
           <nav className="px-4 pb-4 mt-4">
             <ul className="flex flex-col gap-2 text-[15px]">
-              <li><a className="mobile-link" href="#about">Tentang saya</a></li>
-              <li><a className="mobile-link" href="#skills">Skills</a></li>
-              <li><a className="mobile-link" href="#portfolio">Portfolio</a></li>
-              <li><a className="mobile-link" href="#experience">Pengalaman</a></li>
-              <li><a className="mobile-link" href="#organization">Organisasi</a></li>
-              <li><a className="mobile-link" href="#contact">Contact</a></li>
+              <li><a className="mobile-link" href="/#about">Tentang saya</a></li>
+              <li><a className="mobile-link" href="/#skills">Skills</a></li>
+              <li><a className="mobile-link" href="/#portfolio">Portfolio</a></li>
+              <li><a className="mobile-link" href="/#experience">Pengalaman</a></li>
+              <li><a className="mobile-link" href="/#organization">Organisasi</a></li>
+              <li><a className="mobile-link" href="/#contact">Contact</a></li>
             </ul>
 
             <div className="mt-2">

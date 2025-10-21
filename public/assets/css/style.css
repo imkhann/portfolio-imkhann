@@ -339,8 +339,3 @@ html.dark .hero-blob {
 #about strong {
   font-weight: 700;
 }
-
-/* style.css */
-[id] {
-  scroll-margin-top: 5rem; /* header 64px + gap manis */
-}
