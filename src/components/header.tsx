@@ -5,7 +5,7 @@ export default function Header() {
       className="fixed top-0 left-0 right-0 z-[70] border-b border-[var(--line)] bg-[color:var(--glass)] backdrop-blur-md"
     >
       <div className="max-w-[1200px] mx-auto h-16 flex items-center gap-3 px-4 lg:px-6">
-        <a href="#home" className="font-heading font-extrabold text-lg leading-none select-none">
+        <a href="/#home" className="font-heading font-extrabold text-lg leading-none select-none">
           <span className="logo-animate">IMKHANN.</span>
         </a>
 
