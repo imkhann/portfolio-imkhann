@@ -3,6 +3,8 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import "./globals.css";
 import { Inter, Montserrat } from "next/font/google";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -30,9 +32,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="stylesheet" href="/assets/css/style.css" />
       </head>
       <body className="antialiased bg-[var(--bg)] text-[var(--text)] font-sans">
+        <Header />
+        {/* Header fixed, jadi kasih padding top di main */}
+        <main className="pt-16">{children}</main>
+        <Footer />
+
         {/* JS lama tetap jalan setelah halaman interaktif */}
         <Script src="/assets/js/main.js" strategy="afterInteractive" />
-        {children}
       </body>
     </html>
   );

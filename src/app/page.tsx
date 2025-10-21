@@ -1,91 +1,6 @@
 export default function Home() {
   return (
     <main className="pt-16">
-      {/* ===== Header ===== */}
-      <header
-        data-site-header
-        className="fixed top-0 left-0 right-0 z-[70] border-b border-[var(--line)] bg-[color:var(--glass)] backdrop-blur-md"
-      >
-        <div className="max-w-[1200px] mx-auto h-16 flex items-center gap-3 px-4 lg:px-6">
-          <a href="#home" className="font-heading font-extrabold text-lg leading-none select-none">
-            <span className="logo-animate">IMKHANN.</span>
-          </a>
-
-          <div className="flex-1" />
-
-          <nav className="hidden lg:block">
-            <ul className="flex items-center gap-2">
-              <li><a href="#about" className="nav-btn">Tentang saya</a></li>
-              <li><a href="#skills" className="nav-btn">Skills</a></li>
-              <li><a href="#portfolio" className="nav-btn">Portfolio</a></li>
-              <li><a href="#experience" className="nav-btn">Pengalaman</a></li>
-              <li><a href="#organization" className="nav-btn">Organisasi</a></li>
-              <li><a href="#contact" className="nav-btn">Contact</a></li>
-            </ul>
-          </nav>
-
-          <button
-            id="theme-switch"
-            type="button"
-            role="switch"
-            aria-checked="false"
-            aria-label="Ganti tema"
-            className="hidden lg:inline-flex relative items-center h-7 w-16 rounded-full border border-[var(--line)] bg-[color:var(--switchRail)] focus-ring"
-          >
-            <span className="absolute left-2 text-[13px] leading-none select-none">☀️</span>
-            <span className="absolute right-2 text-[13px] leading-none select-none">🌙</span>
-            <span className="knob absolute top-0.5 left-0.5 h-6 w-6 rounded-full bg-white shadow transition-transform will-change-transform" />
-          </button>
-
-          <button
-            id="hamburger"
-            type="button"
-            aria-label="Buka menu"
-            aria-expanded="false"
-            className="ml-2 grid place-items-center lg:hidden w-10 h-10 rounded-md hover:bg-[var(--surface)] focus-ring relative"
-          >
-            <span className="ham-line" />
-            <span className="ham-line" />
-            <span className="ham-line" />
-          </button>
-        </div>
-
-        <aside id="mobile-drawer" className="fixed inset-0 z-[40] pointer-events-none" aria-hidden="true">
-          <div className="drawer-backdrop absolute inset-x-0 top-16 bottom-0 bg-transparent opacity-0 transition-opacity z-[41]" />
-          <div
-            className="drawer-panel absolute right-3 top-16 w-[260px] md:w-[320px]
-            rounded-xl shadow-xl border border-[var(--line)]
-            bg-[var(--bg)] z-[55]
-            opacity-0 -translate-y-2 transition-all duration-200"
-          >
-            <nav className="px-4 pb-4">
-              <ul className="flex flex-col gap-4 text-[15px]">
-                <li><a className="mobile-link" href="#about">Tentang saya</a></li>
-                <li><a className="mobile-link" href="#skills">Skills</a></li>
-                <li><a className="mobile-link" href="#portfolio">Portfolio</a></li>
-                <li><a className="mobile-link" href="#experience">Pengalaman</a></li>
-                <li><a className="mobile-link" href="#organization">Organisasi</a></li>
-                <li><a className="mobile-link" href="#contact">Contact</a></li>
-              </ul>
-
-              <div className="mt-6">
-                <button
-                  id="theme-switch-mobile"
-                  type="button"
-                  role="switch"
-                  aria-checked="false"
-                  aria-label="Ganti tema"
-                  className="relative inline-flex items-center h-7 w-16 rounded-full border border-[var(--line)] bg-[color:var(--switchRail)] focus-ring"
-                >
-                  <span className="absolute left-2 text-[13px] leading-none select-none">☀️</span>
-                  <span className="absolute right-2 text-[13px] leading-none select-none">🌙</span>
-                  <span className="knob absolute top-0.5 left-0.5 h-6 w-6 rounded-full bg-white shadow transition-transform will-change-transform" />
-                </button>
-              </div>
-            </nav>
-          </div>
-        </aside>
-      </header>
 
       {/* ===== Main ===== */}
       {/* Hero */}
@@ -160,25 +75,25 @@ export default function Home() {
         </div>
         <div className="grid md:grid-cols-2 gap-4">
           <article className="card p-4">
-            <h4 className="font-semibold mb-2">Analisis Data & Visualisasi</h4>
+            <h4 className="font-heading font-semibold mb-2">Analisis Data & Visualisasi</h4>
             <ul className="mt-2 list-disc pl-5 text-sm space-y-1">
               <li>Python (Pandas, NumPy, Matplotlib, Seaborn)</li><li>SQL, Tableau, Power BI</li><li>Excel, Google Sheets</li>
             </ul>
           </article>
           <article className="card p-4">
-            <h4 className="font-semibold mb-2">Pengembangan Web</h4>
+            <h4 className="font-heading font-semibold mb-2">Pengembangan Web</h4>
             <ul className="mt-2 list-disc pl-5 text-sm space-y-1">
               <li>Next.js (React), JavaScript (ES6+), TypeScript</li><li>Tailwind CSS, Node.js (dasar)</li>
             </ul>
           </article>
           <article className="card p-4">
-            <h4 className="font-semibold mb-2">Desain & Produksi Visual</h4>
+            <h4 className="font-heading font-semibold mb-2">Desain & Produksi Visual</h4>
             <ul className="mt-2 list-disc pl-5 text-sm space-y-1">
               <li>Figma, Canva, Adobe Photoshop, CorelDRAW</li><li>Adobe Premiere Pro, CapCut, OBS Studio, Prism Live Studio</li>
             </ul>
           </article>
           <article className="card p-4">
-            <h4 className="font-semibold mb-2">Keterampilan Pendukung</h4>
+            <h4 className="font-heading font-semibold mb-2">Keterampilan Pendukung</h4>
             <ul className="mt-2 list-disc pl-5 text-sm space-y-1">
               <li>Problem Solving, Analytical Thinking</li><li>Adaptif terhadap teknologi baru</li><li>Kolaboratif dan detail-oriented</li>
             </ul>
@@ -190,47 +105,117 @@ export default function Home() {
       <section id="portfolio" className="container-pro py-12">
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center gap-2">
-            <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"
-                strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-              <path d="M3 7h18v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7Z"/>
-              <path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/>
+            <svg
+              className="w-5 h-5"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M3 7h18v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7Z" />
+              <path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2" />
             </svg>
             <h3 className="font-heading text-2xl md:text-3xl font-bold">Portfolio</h3>
           </div>
           <a className="btn btn-ghost" href="/projects">Lihat semua →</a>
         </div>
 
-        <div id="projects-preview" className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {/* Satu kolom vertikal, fokus preview besar */}
+        <div id="projects-preview" className="space-y-6">
+
+          {/* 1) Data Analyst (2 dashboard) */}
           <article className="card p-4">
-            <div className="flex items-center gap-2 text-xs mb-2">
-              <span className="px-2 py-0.5 rounded-full border border-[var(--line)]">Data Analyst</span>
-              <span className="px-2 py-0.5 rounded-full border border-[var(--line)]">Dashboard</span>
+            <h4 className="font-heading font-semibold text-lg">Dashboard Analitik</h4>
+
+            {/* Preview besar, dua gambar bersebelahan biar tetap kebaca */}
+            <div className="mt-3 grid grid-cols-1 md:grid-cols-2 gap-3">
+              <a href="/projects#data-analyst" className="group block overflow-hidden rounded-md border border-[var(--line)]">
+                <img
+                  src="/assets/portfolio/da-dashboard-1.webp"
+                  alt="Cuplikan dashboard 1"
+                  className="w-full aspect-[16/9] object-cover transition-transform duration-200 group-hover:scale-[1.02]"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </a>
+              <a href="/projects#data-analyst" className="group block overflow-hidden rounded-md border border-[var(--line)]">
+                <img
+                  src="/assets/portfolio/da-dashboard-2.webp"
+                  alt="Cuplikan dashboard 2"
+                  className="w-full aspect-[16/9] object-cover transition-transform duration-200 group-hover:scale-[1.02]"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </a>
             </div>
-            <h4 className="font-semibold">Dashboard Deteksi Anomali Konsumsi Air</h4>
-            <p className="text-sm text-slate-600 dark:text-slate-300 mt-1">
-              Analisis pola konsumsi air menggunakan <em>Isolation Forest</em> dan visualisasi interaktif BI.
+
+            <p className="text-sm text-slate-600 dark:text-slate-300 mt-3">
+              Preview analisis data: tren, outlier, dan metrik utama disajikan ringkas untuk pengambilan keputusan.
             </p>
           </article>
 
+          {/* 2) Desain Grafis (poster + 2 feed IG) */}
           <article className="card p-4">
-            <div className="flex items-center gap-2 text-xs mb-2">
-              <span className="px-2 py-0.5 rounded-full border border-[var(--line)]">Desain</span>
-              <span className="px-2 py-0.5 rounded-full border border-[var(--line)]">Publikasi</span>
+            <h4 className="font-heading font-semibold text-lg">Desain Grafis</h4>
+
+            {/* Preview besar, tiga karya */}
+            <div className="mt-3 grid grid-cols-1 md:grid-cols-3 gap-3">
+              <a href="/projects#design" className="group block overflow-hidden rounded-md border border-[var(--line)]">
+                <img
+                  src="/assets/portfolio/design-poster.webp"
+                  alt="Poster publikasi"
+                  className="w-full aspect-[3/4] object-cover transition-transform duration-200 group-hover:scale-[1.02]"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </a>
+              <a href="/projects#design" className="group block overflow-hidden rounded-md border border-[var(--line)]">
+                <img
+                  src="/assets/portfolio/design-feed-1.webp"
+                  alt="Feed Instagram 1"
+                  className="w-full aspect-square object-cover transition-transform duration-200 group-hover:scale-[1.02]"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </a>
+              <a href="/projects#design" className="group block overflow-hidden rounded-md border border-[var(--line)]">
+                <img
+                  src="/assets/portfolio/design-feed-2.webp"
+                  alt="Feed Instagram 2"
+                  className="w-full aspect-square object-cover transition-transform duration-200 group-hover:scale-[1.02]"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </a>
             </div>
-            <h4 className="font-semibold">Desain Publikasi & Branding Kampus</h4>
-            <p className="text-sm text-slate-600 dark:text-slate-300 mt-1">
-              Produksi visual untuk publikasi acara kampus (KPUM, LKMM-TM, DevClass) secara konsisten.
+
+            <p className="text-sm text-slate-600 dark:text-slate-300 mt-3">
+              Poster dan konten sosial bergaya konsisten untuk kebutuhan publikasi dan brand awareness.
             </p>
           </article>
 
+          {/* 3) Dokumentasi Video (1 preview saja) */}
           <article className="card p-4">
-            <div className="flex items-center gap-2 text-xs mb-2">
-              <span className="px-2 py-0.5 rounded-full border border-[var(--line)]">Videografi</span>
-              <span className="px-2 py-0.5 rounded-full border border-[var(--line)]">Dokumentasi</span>
-            </div>
-            <h4 className="font-semibold">Dokumentasi & Editing Video KKN 2024</h4>
-            <p className="text-sm text-slate-600 dark:text-slate-300 mt-1">
-              Rekam dan edit video kegiatan KKN Bolodewo untuk publikasi dan dokumentasi.
+            <h4 className="font-heading font-semibold text-lg">Dokumentasi Video</h4>
+
+            <a href="/projects#video" className="group relative mt-3 block overflow-hidden rounded-md border border-[var(--line)]">
+              <img
+                src="/assets/portfolio/video-shot-1.webp"
+                alt="Cuplikan dokumentasi video"
+                className="w-full aspect-[16/9] object-cover transition-transform duration-200 group-hover:scale-[1.02]"
+                loading="lazy"
+                decoding="async"
+              />
+              <span className="pointer-events-none absolute right-2 top-2 rounded bg-black/65 px-1.5 py-0.5 text-[10px] text-white">
+                ▶ preview
+              </span>
+            </a>
+
+            <p className="text-sm text-slate-600 dark:text-slate-300 mt-3">
+              Cuplikan dokumentasi kegiatan. Lihat versi lengkap dan detail proyek di halaman portfolio.
             </p>
           </article>
         </div>
@@ -239,7 +224,7 @@ export default function Home() {
       {/* Pengalaman */}
       <section id="experience" className="container-pro py-12">
         <div className="flex items-center justify-between mb-4">
-          <div className="flex items-center gap-2 ">
+          <div className="flex items-center gap-2">
             <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"
                 strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
               <path d="M3 5h4v4H3zM10 10h4v4h-4zM17 15h4v4h-4z"/>
@@ -250,10 +235,10 @@ export default function Home() {
           <a className="btn btn-ghost" href="/experience">Lihat semua →</a>
         </div>
         <div className="grid md:grid-cols-2 gap-4">
-          <article className="card p-4"><h4 className="font-semibold mb-1">Driver</h4><p className="mb-1">Shopee Food</p><p className="text-sm">Januari 2025 – Sekarang</p></article>
-          <article className="card p-4"><h4 className="font-semibold mb-1">Waiter & Kitchen Staff</h4><p className="mb-1">Spesial Soto Boyolali</p><p className="text-sm">Desember 2024 – Sekarang</p></article>
-          <article className="card p-4"><h4 className="font-semibold mb-1">Crew Store</h4><p className="mb-1">Pentol Jeki</p><p className="text-sm">November 2023 – Agustus 2024</p></article>
-          <article className="card p-4"><h4 className="font-semibold mb-1">Administrasi (Magang)</h4><p className="mb-1">Dishub Kota Surabaya</p><p className="text-sm">Mei 2024 – Agustus 2024</p></article>
+          <article className="card p-4"><h4 className="font-heading font-semibold mb-1">Driver</h4><p className="mb-1">Shopee Food</p><p className="text-sm">Januari 2025 – Sekarang</p></article>
+          <article className="card p-4"><h4 className="font-heading font-semibold mb-1">Waiter & Kitchen Staff</h4><p className="mb-1">Spesial Soto Boyolali</p><p className="text-sm">Desember 2024 – Sekarang</p></article>
+          <article className="card p-4"><h4 className="font-heading font-semibold mb-1">Crew Store</h4><p className="mb-1">Pentol Jeki</p><p className="text-sm">November 2023 – Agustus 2024</p></article>
+          <article className="card p-4"><h4 className="font-heading font-semibold mb-1">Administrasi (Magang)</h4><p className="mb-1">Dishub Kota Surabaya</p><p className="text-sm">Mei 2024 – Agustus 2024</p></article>
         </div>
       </section>
 
@@ -276,7 +261,7 @@ export default function Home() {
         <div className="grid md:grid-cols-2 gap-4">
           <article className="card p-4">
             <div className="flex items-start justify-between gap-2">
-              <h4 className="font-semibold mb-1">Komisi Pemilihan Umum Mahasiswa (KPUM)</h4>
+              <h4 className="font-heading font-semibold mb-1">Komisi Pemilihan Umum Mahasiswa (KPUM)</h4>
               <span className="text-xs px-2 py-0.5 rounded-full border border-[var(--line)]">2024</span>
             </div>
             <p className="mb-1">Universitas Narotama</p>
@@ -284,7 +269,7 @@ export default function Home() {
           </article>
           <article className="card p-4">
           <div className="flex items-start justify-between gap-2">
-            <h4 className="font-semibold mb-1">Kuliah Kerja Nyata (KKN)</h4>
+            <h4 className="font-heading font-semibold mb-1">Kuliah Kerja Nyata (KKN)</h4>
             <span className="text-xs px-2 py-0.5 rounded-full border border-[var(--line)]">2024</span>
           </div>
           <p className="mb-1">Kelompok Bolodewo</p>
@@ -292,7 +277,7 @@ export default function Home() {
           </article>
           <article className="card p-4">
             <div className="flex items-start justify-between gap-2">
-              <h4 className="font-semibold mb-1">DevClass (Langkah Awal Menjadi Web Developer)</h4>
+              <h4 className="font-heading font-semibold mb-1">DevClass (Langkah Awal Menjadi Web Developer)</h4>
               <span className="text-xs px-2 py-0.5 rounded-full border border-[var(--line)]">2023</span>
             </div>
             <p className="mb-1">HIMA ILKOM</p>
@@ -300,7 +285,7 @@ export default function Home() {
           </article>
           <article className="card p-4">
             <div className="flex items-start justify-between gap-2">
-              <h4 className="font-semibold mb-1">Latihan Keterampilan Manajemen Mahasiswa - Tingkat Menengah (LKMM-TM)</h4>
+              <h4 className="font-heading font-semibold mb-1">Latihan Keterampilan Manajemen Mahasiswa - Tingkat Menengah (LKMM-TM)</h4>
               <span className="text-xs px-2 py-0.5 rounded-full border border-[var(--line)]">2023</span>
             </div>
             <p className="mb-1">Universitas Narotama</p>
@@ -325,7 +310,7 @@ export default function Home() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           <article className="card p-4">
             <div className="flex items-start justify-between gap-2">
-              <h4 className="font-semibold">S1 Teknik Informatika</h4>
+              <h4 className="font-heading font-semibold">S1 Teknik Informatika</h4>
               <span className="text-xs px-2 py-0.5 rounded-full border border-[var(--line)]">2021–2025</span>
             </div>
             <p className="mb-1">Universitas Narotama</p>
@@ -333,15 +318,15 @@ export default function Home() {
           </article>
           <article className="card p-4">
             <div className="flex items-start justify-between gap-2">
-              <h4 className="font-semibold">Data Analyst</h4>
+              <h4 className="font-heading font-semibold">Data Analyst</h4>
               <span className="text-xs px-2 py-0.5 rounded-full border border-[var(--line)]">2023</span>
             </div>
             <p className="mb-1">Karier.mu by Sekolah.mu</p>
-            <p className="mt-1 text-sm">MSIB</p>
+            <p className="mt-1 text-sm">Magang dan Studi Independen Bersertifikat</p>
           </article>
           <article className="card p-4">
             <div className="flex items-start justify-between gap-2">
-              <h4 className="font-semibold">Teknik Kimia Industri</h4>
+              <h4 className="font-heading font-semibold">Teknik Kimia Industri</h4>
               <span className="text-xs px-2 py-0.5 rounded-full border border-[var(--line)]">2017–2020</span>
             </div>
             <p className="mb-1">SMK Negeri 1 Grati</p>
@@ -475,16 +460,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===== Footer ===== */}
-      <footer className="mt-16 border-t border-[var(--line)]">
-        <div className="container-pro py-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-sm">
-          <p>© 2025 Imam Muhannad.</p>
-          <div className="flex items-center gap-3">
-            <a className="btn btn-ghost" href="https://docs.google.com/document/d/18WYvun2jCcno1KxRFyvMuKTu-eo9_pGTdgtF6Ud9llQ/edit?usp=sharing" target="_blank" rel="noreferrer">Download CV</a>
-            <a className="btn btn-ghost" href="#home">Kembali ke atas</a>
-          </div>
-        </div>
-      </footer>
     </main>
   );
 }
