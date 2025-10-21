@@ -94,7 +94,7 @@ export default function Home() {
           <div className="flex flex-wrap items-center relative z-10">
             <div className="w-full px-4 lg:w-1/2 self-center">
               <p className="hero-kicker">Halo <span aria-hidden="true">✋</span>, saya</p>
-              <h1 className="hero-title font-heading">Imam Muhannad</h1>g
+              <h1 className="hero-title font-heading">Imam Muhannad</h1>
               <h2 className="hero-sub">Data Analyst • Web Developer • Visual Designer</h2>
               <p className="hero-desc">Menggabungkan data, desain, dan teknologi untuk menghadirkan karya visual yang informatif, fungsional, dan mudah dipahami.</p>
               <a href="#contact" className="btn btn-accent focus-ring">Contact Me</a>
