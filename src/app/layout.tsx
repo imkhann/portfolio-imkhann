@@ -2,6 +2,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import "./globals.css";
+import "@/assets/css/style.css"; // ganti <link> jadi import
 import { Inter, Montserrat } from "next/font/google";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
@@ -27,14 +28,11 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="id" className={`scroll-smooth ${inter.variable} ${montserrat.variable}`}>
-      <head>
-        {/* CSS kustom kamu */}
-        <link rel="stylesheet" href="/assets/css/style.css" />
-      </head>
+      <head>{/* tidak ada <link rel="stylesheet"> manual */}</head>
       <body className="antialiased bg-[var(--bg)] text-[var(--text)] font-sans">
         <Header />
-        {/* Header fixed, jadi kasih padding top di main */}
-        <main className="pt-16">{children}</main>
+        {/* Biarkan page.tsx yang atur <main className="pt-16"> */}
+        {children}
         <Footer />
 
         {/* JS lama tetap jalan setelah halaman interaktif */}

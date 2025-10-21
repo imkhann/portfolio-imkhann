@@ -1,3 +1,6 @@
+// src/components/footer.tsx
+import Link from "next/link";
+
 export default function Footer() {
   return (
     <footer className="mt-16 border-t border-[var(--line)]">
@@ -12,7 +15,10 @@ export default function Footer() {
           >
             Download CV
           </a>
-          <a className="btn btn-ghost" href="/#home">Kembali ke atas</a>
+
+          <Link className="btn btn-ghost" href="/#home">
+            Kembali ke atas
+          </Link>
         </div>
       </div>
     </footer>

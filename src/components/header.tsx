@@ -1,3 +1,6 @@
+// src/components/header.tsx
+import Link from "next/link";
+
 export default function Header() {
   return (
     <header
@@ -5,20 +8,20 @@ export default function Header() {
       className="fixed top-0 left-0 right-0 z-[70] border-b border-[var(--line)] bg-[color:var(--glass)] backdrop-blur-md"
     >
       <div className="max-w-[1200px] mx-auto h-16 flex items-center gap-3 px-4 lg:px-6">
-        <a href="/#home" className="font-heading font-extrabold text-lg leading-none select-none">
+        <Link href="/#home" className="font-heading font-extrabold text-lg leading-none select-none">
           <span className="logo-animate">IMKHANN.</span>
-        </a>
+        </Link>
 
         <div className="flex-1" />
 
         <nav className="hidden lg:block">
           <ul className="flex items-center gap-2">
-            <li><a href="/#about" className="nav-btn">Tentang saya</a></li>
-            <li><a href="/#skills" className="nav-btn">Skills</a></li>
-            <li><a href="/#portfolio" className="nav-btn">Portfolio</a></li>
-            <li><a href="/#experience" className="nav-btn">Pengalaman</a></li>
-            <li><a href="/#organization" className="nav-btn">Organisasi</a></li>
-            <li><a href="/#contact" className="nav-btn">Contact</a></li>
+            <li><Link href="/#about" className="nav-btn">Tentang saya</Link></li>
+            <li><Link href="/#skills" className="nav-btn">Skills</Link></li>
+            <li><Link href="/#portfolio" className="nav-btn">Portfolio</Link></li>
+            <li><Link href="/#experience" className="nav-btn">Pengalaman</Link></li>
+            <li><Link href="/#organization" className="nav-btn">Organisasi</Link></li>
+            <li><Link href="/#contact" className="nav-btn">Contact</Link></li>
           </ul>
         </nav>
 
@@ -58,12 +61,12 @@ export default function Header() {
         >
           <nav className="px-4 pb-4 mt-4">
             <ul className="flex flex-col gap-2 text-[15px]">
-              <li><a className="mobile-link" href="/#about">Tentang saya</a></li>
-              <li><a className="mobile-link" href="/#skills">Skills</a></li>
-              <li><a className="mobile-link" href="/#portfolio">Portfolio</a></li>
-              <li><a className="mobile-link" href="/#experience">Pengalaman</a></li>
-              <li><a className="mobile-link" href="/#organization">Organisasi</a></li>
-              <li><a className="mobile-link" href="/#contact">Contact</a></li>
+              <li><Link className="mobile-link" href="/#about">Tentang saya</Link></li>
+              <li><Link className="mobile-link" href="/#skills">Skills</Link></li>
+              <li><Link className="mobile-link" href="/#portfolio">Portfolio</Link></li>
+              <li><Link className="mobile-link" href="/#experience">Pengalaman</Link></li>
+              <li><Link className="mobile-link" href="/#organization">Organisasi</Link></li>
+              <li><Link className="mobile-link" href="/#contact">Contact</Link></li>
             </ul>
 
             <div className="mt-2">
