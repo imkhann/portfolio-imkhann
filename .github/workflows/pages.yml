@@ -14,6 +14,7 @@ concurrency:
   group: "pages"
   cancel-in-progress: true
 
+# .github/workflows/pages.yml
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -24,12 +25,10 @@ jobs:
           node-version: 20
           cache: npm
       - run: npm ci
-      - run: npm run build
-      - run: npm run export
+      - run: npm run build              # <-- no 'next export'
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: ./out
-
+          path: ./out                   # <-- Next writes here in export mode
   deploy:
     needs: build
     runs-on: ubuntu-latest
@@ -39,3 +38,4 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+        

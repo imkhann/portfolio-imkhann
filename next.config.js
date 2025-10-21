@@ -10,4 +10,10 @@ const nextConfig = {
   trailingSlash: true               // Hasil export jadi folder/index.html
 }
 
-module.exports = nextConfig
+module.exports = {
+  output: 'export',                 // replaces the old `next export` CLI
+  images: { unoptimized: true },    // static export has no image optimizer
+  basePath: isProd ? `/${repo}` : '',
+  assetPrefix: isProd ? `/${repo}/` : '',
+  trailingSlash: true
+}

@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "export": "next export",
-    "postexport": "touch out/.nojekyll"
+    "postexport": "touch out/.nojekyll",
+    "postbuild": "mkdir -p out && touch out/.nojekyll"
   },
   "dependencies": {
     "react": "19.1.0",
