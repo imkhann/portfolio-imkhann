@@ -1,24 +1,35 @@
+// src/app/layout.tsx
+import type { Metadata } from "next";
 import Script from "next/script";
 import "./globals.css";
+import { Inter, Montserrat } from "next/font/google";
 
-export const metadata = {
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-sans",
+});
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["700", "800"],
+  display: "swap",
+  variable: "--font-heading",
+});
+
+export const metadata: Metadata = {
   title: "Portfolio – Imam Muhannad",
-  description: "Creative Enthusiast • Visual Storyteller • Data-minded visuals.",
+  description: "Data Analyst • Web Developer • Visual Designer.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="id" className="scroll-smooth">
+    <html lang="id" className={`scroll-smooth ${inter.variable} ${montserrat.variable}`}>
       <head>
-        {/* Kalau HTML lamamu pakai Google Fonts, taruh link-nya di sini */}
-        {/* <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link href="...fonts..." rel="stylesheet" /> */}
-
-        {/* global.css → style.css sesuai permintaanmu */}
+        {/* CSS kustom kamu */}
         <link rel="stylesheet" href="/assets/css/style.css" />
       </head>
-      <body className="bg-[var(--bg)] text-[var(--text)] antialiased">
+      <body className="antialiased bg-[var(--bg)] text-[var(--text)] font-sans">
         {/* JS lama tetap jalan setelah halaman interaktif */}
         <Script src="/assets/js/main.js" strategy="afterInteractive" />
         {children}

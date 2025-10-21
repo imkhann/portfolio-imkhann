@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+const onVercel = !!process.env.VERCEL
 const isProd = process.env.NODE_ENV === 'production'
 const repo = 'portfolio-imkhann' // GANTI kalau beda, tapi ya ini namanya
 
@@ -11,9 +12,9 @@ const nextConfig = {
 }
 
 module.exports = {
-  output: 'export',                 // replaces the old `next export` CLI
-  images: { unoptimized: true },    // static export has no image optimizer
-  basePath: isProd ? `/${repo}` : '',
-  assetPrefix: isProd ? `/${repo}/` : '',
-  trailingSlash: true
+  output: !onVercel && isProd ? 'export' : undefined,
+  images: { unoptimized: !onVercel && isProd },
+  basePath: !onVercel && isProd ? `/${repo}` : '',
+  assetPrefix: !onVercel && isProd ? `/${repo}/` : '',
+  trailingSlash: !onVercel && isProd ? true : false
 }

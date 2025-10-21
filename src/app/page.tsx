@@ -94,7 +94,7 @@ export default function Home() {
           <div className="flex flex-wrap items-center relative z-10">
             <div className="w-full px-4 lg:w-1/2 self-center">
               <p className="hero-kicker">Halo <span aria-hidden="true">✋</span>, saya</p>
-              <h1 className="hero-title">Imam Muhannad</h1>
+              <h1 className="hero-title font-heading">Imam Muhannad</h1>g
               <h2 className="hero-sub">Data Analyst • Web Developer • Visual Designer</h2>
               <p className="hero-desc">Menggabungkan data, desain, dan teknologi untuk menghadirkan karya visual yang informatif, fungsional, dan mudah dipahami.</p>
               <a href="#contact" className="btn btn-accent focus-ring">Contact Me</a>
@@ -276,7 +276,7 @@ export default function Home() {
         <div className="grid md:grid-cols-2 gap-4">
           <article className="card p-4">
             <div className="flex items-start justify-between gap-2">
-              <h4 className="font-semibold mb-1">KPUM</h4>
+              <h4 className="font-semibold mb-1">Komisi Pemilihan Umum Mahasiswa (KPUM)</h4>
               <span className="text-xs px-2 py-0.5 rounded-full border border-[var(--line)]">2024</span>
             </div>
             <p className="mb-1">Universitas Narotama</p>
@@ -284,7 +284,7 @@ export default function Home() {
           </article>
           <article className="card p-4">
           <div className="flex items-start justify-between gap-2">
-            <h4 className="font-semibold mb-1">KKN</h4>
+            <h4 className="font-semibold mb-1">Kuliah Kerja Nyata (KKN)</h4>
             <span className="text-xs px-2 py-0.5 rounded-full border border-[var(--line)]">2024</span>
           </div>
           <p className="mb-1">Kelompok Bolodewo</p>
@@ -292,7 +292,7 @@ export default function Home() {
           </article>
           <article className="card p-4">
             <div className="flex items-start justify-between gap-2">
-              <h4 className="font-semibold mb-1">DevClass</h4>
+              <h4 className="font-semibold mb-1">DevClass (Langkah Awal Menjadi Web Developer)</h4>
               <span className="text-xs px-2 py-0.5 rounded-full border border-[var(--line)]">2023</span>
             </div>
             <p className="mb-1">HIMA ILKOM</p>
@@ -300,7 +300,7 @@ export default function Home() {
           </article>
           <article className="card p-4">
             <div className="flex items-start justify-between gap-2">
-              <h4 className="font-semibold mb-1">LKMM-TM</h4>
+              <h4 className="font-semibold mb-1">Latihan Keterampilan Manajemen Mahasiswa - Tingkat Menengah (LKMM-TM)</h4>
               <span className="text-xs px-2 py-0.5 rounded-full border border-[var(--line)]">2023</span>
             </div>
             <p className="mb-1">Universitas Narotama</p>
