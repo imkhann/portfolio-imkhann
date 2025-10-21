@@ -152,7 +152,7 @@ export default function Home() {
               </a>
             </div>
 
-            <p className="text-sm text-slate-600 dark:text-slate-300 mt-3">
+            <p className="text-sm mt-3">
               Preview analisis data: tren, outlier, dan metrik utama disajikan ringkas untuk pengambilan keputusan.
             </p>
           </article>
@@ -192,7 +192,7 @@ export default function Home() {
               </a>
             </div>
 
-            <p className="text-sm text-slate-600 dark:text-slate-300 mt-3">
+            <p className="text-sm mt-3">
               Poster dan konten sosial bergaya konsisten untuk kebutuhan publikasi dan brand awareness.
             </p>
           </article>
@@ -214,7 +214,7 @@ export default function Home() {
               </span>
             </a>
 
-            <p className="text-sm text-slate-600 dark:text-slate-300 mt-3">
+            <p className="text-sm mt-3">
               Cuplikan dokumentasi kegiatan. Lihat versi lengkap dan detail proyek di halaman portfolio.
             </p>
           </article>
