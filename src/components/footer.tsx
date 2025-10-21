@@ -12,7 +12,7 @@ export default function Footer() {
           >
             Download CV
           </a>
-          <a className="btn btn-ghost" href="#home">Kembali ke atas</a>
+          <a className="btn btn-ghost" href="/#home">Kembali ke atas</a>
         </div>
       </div>
     </footer>
