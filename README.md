@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌐 Portfolio – Imam Muhannad
 
-## Getting Started
+Proyek ini merupakan website **personal portfolio** yang dikembangkan menggunakan **Next.js** (React Framework) dengan **TypeScript** dan **Tailwind CSS**.  
+Website ini menampilkan profil, keahlian, pengalaman, pendidikan, serta proyek-proyek yang pernah dikerjakan oleh **Imam Muhannad** — seorang *Data Analyst • Web Developer • Visual Designer*.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## ✨ Fitur Utama
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Tampilan Responsif**  
+  Desain menyesuaikan ukuran layar (mobile, tablet, desktop) dengan layout yang tetap rapi dan ringan.
+- **Navigasi Dinamis & Smooth Scrolling**  
+  Transisi antar section halus dan mudah diakses.
+- **Mode Tema (Light/Dark)**  
+  Pengguna dapat mengubah tema sesuai preferensi visual.
+- **Formulir Kontak Terintegrasi**  
+  Form dikirim melalui [Formspree](https://formspree.io), memudahkan pengunjung untuk menghubungi langsung.
+- **Ikon Sosial Interaktif**  
+  Termasuk LinkedIn, Instagram, Email, Telepon, WhatsApp, dan Telegram.
+- **Struktur Data Profesional**  
+  Section terorganisir: Tentang, Skills, Portfolio, Pengalaman, Organisasi, Pendidikan, dan Kontak.
+- **Optimasi Gambar Modern (WebP)**  
+  Gambar menggunakan format `.webp` agar ringan dan cepat dimuat.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🧩 Teknologi yang Digunakan
 
-## Learn More
+| Kategori | Teknologi |
+|-----------|------------|
+| **Framework Utama** | [Next.js 15+](https://nextjs.org/) |
+| **Bahasa Pemrograman** | TypeScript |
+| **Frontend Styling** | [Tailwind CSS](https://tailwindcss.com/) |
+| **Runtime Environment** | Node.js |
+| **Deployment** | [Vercel](https://vercel.com/) |
+| **Form Handling** | [Formspree](https://formspree.io) |
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🏗️ Struktur Proyek
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
