@@ -127,33 +127,45 @@ export default function Home() {
         <div id="projects-preview" className="space-y-6">
 
           {/* 1) Data Analyst (2 dashboard) */}
-          <article className="card p-4">
-            <h4 className="font-heading font-semibold text-lg">Dashboard Analitik</h4>
+<article className="card p-4">
+  <h4 className="font-heading font-semibold text-lg">Dashboard Analitik</h4>
 
-            {/* Preview besar, dua gambar bersebelahan biar tetap kebaca */}
-            <div className="mt-3 grid grid-cols-1 md:grid-cols-2 gap-3">
-              <a href="/projects#data-analyst" className="group block overflow-hidden rounded-md border border-[var(--line)]">
+            {/* Preview besar: dua gambar, tidak ter-crop */}
+            <div className="mt-3 grid grid-cols-1 md:grid-cols-2 gap-4">
+              {/* Dashboard 1 */}
+              <a
+                href="/projects#data-analyst"
+                className="group block rounded-md border border-[var(--line)] bg-[var(--surface)] p-2 overflow-hidden"
+                aria-label="Lihat detail Dashboard Analitik 1"
+              >
                 <img
-                  src="/assets/portfolio/da-dashboard-1.webp"
-                  alt="Cuplikan dashboard 1"
-                  className="w-full aspect-[16/9] object-cover transition-transform duration-200 group-hover:scale-[1.02]"
+                  src="/assets/img/portfolio/dashboard/dashboard1.webp"
+                  alt="Cuplikan Dashboard Analitik 1"
+                  className="w-full aspect-[16/9] object-contain transition-transform duration-200 group-hover:scale-[1.01]"
                   loading="lazy"
                   decoding="async"
                 />
               </a>
-              <a href="/projects#data-analyst" className="group block overflow-hidden rounded-md border border-[var(--line)]">
+
+              {/* Dashboard 2 */}
+              <a
+                href="/projects#data-analyst"
+                className="group block rounded-md border border-[var(--line)] bg-[var(--surface)] p-2 overflow-hidden"
+                aria-label="Lihat detail Dashboard Analitik 2"
+              >
                 <img
-                  src="/assets/portfolio/da-dashboard-2.webp"
-                  alt="Cuplikan dashboard 2"
-                  className="w-full aspect-[16/9] object-cover transition-transform duration-200 group-hover:scale-[1.02]"
+                  src="/assets/img/portfolio/dashboard/dashboard2.webp"
+                  alt="Cuplikan Dashboard Analitik 2"
+                  className="w-full aspect-[16/9] object-contain transition-transform duration-200 group-hover:scale-[1.01]"
                   loading="lazy"
                   decoding="async"
                 />
               </a>
             </div>
 
-            <p className="text-sm mt-3">
-              Preview analisis data: tren, outlier, dan metrik utama disajikan ringkas untuk pengambilan keputusan.
+            <p className="text-sm text-[color:var(--text-muted)] mt-3">
+              Dashboard interaktif hasil pengembangan Business Intelligence untuk memantau pola konsumsi air, tagihan, serta deteksi anomali menggunakan algoritma <em>Isolation Forest</em>. 
+              Visualisasi mencakup tren konsumsi dan biaya per wilayah, sebaran pelanggan, serta peta wilayah dengan tingkat anomali yang teridentifikasi.
             </p>
           </article>
 
@@ -192,7 +204,7 @@ export default function Home() {
               </a>
             </div>
 
-            <p className="text-sm mt-3">
+            <p className="text-sm text-[color:var(--text-muted)] mt-3">
               Poster dan konten sosial bergaya konsisten untuk kebutuhan publikasi dan brand awareness.
             </p>
           </article>
@@ -214,7 +226,7 @@ export default function Home() {
               </span>
             </a>
 
-            <p className="text-sm mt-3">
+            <p className="text-sm text-[color:var(--text-muted)] mt-3">
               Cuplikan dokumentasi kegiatan. Lihat versi lengkap dan detail proyek di halaman portfolio.
             </p>
           </article>
@@ -235,10 +247,26 @@ export default function Home() {
           <a className="btn btn-ghost" href="/experience">Lihat semua →</a>
         </div>
         <div className="grid md:grid-cols-2 gap-4">
-          <article className="card p-4"><h4 className="font-heading font-semibold mb-1">Driver</h4><p className="mb-1">Shopee Food</p><p className="text-sm">Januari 2025 – Sekarang</p></article>
-          <article className="card p-4"><h4 className="font-heading font-semibold mb-1">Waiter & Kitchen Staff</h4><p className="mb-1">Spesial Soto Boyolali</p><p className="text-sm">Desember 2024 – Sekarang</p></article>
-          <article className="card p-4"><h4 className="font-heading font-semibold mb-1">Crew Store</h4><p className="mb-1">Pentol Jeki</p><p className="text-sm">November 2023 – Agustus 2024</p></article>
-          <article className="card p-4"><h4 className="font-heading font-semibold mb-1">Administrasi (Magang)</h4><p className="mb-1">Dishub Kota Surabaya</p><p className="text-sm">Mei 2024 – Agustus 2024</p></article>
+          <article className="card p-4">
+            <h4 className="font-heading font-semibold mb-1">Driver</h4>
+            <p className="mb-1">Shopee Food</p>
+            <p className="text-sm text-[color:var(--text-desc)]">Januari 2025 – Sekarang</p>
+          </article>
+          <article className="card p-4">
+            <h4 className="font-heading font-semibold mb-1">Waiter & Kitchen Staff</h4>
+            <p className="mb-1">Spesial Soto Boyolali</p>
+            <p className="text-sm text-[color:var(--text-desc)]">Desember 2024 – Sekarang</p>
+          </article>
+          <article className="card p-4">
+            <h4 className="font-heading font-semibold mb-1">Crew Store</h4>
+            <p className="mb-1">Pentol Jeki</p>
+            <p className="text-sm text-[color:var(--text-desc)]">November 2023 – Agustus 2024</p>
+          </article>
+          <article className="card p-4">
+            <h4 className="font-heading font-semibold mb-1">Administrasi (Magang)</h4>
+            <p className="mb-1">Dishub Kota Surabaya</p>
+            <p className="text-sm text-[color:var(--text-desc)]">Mei 2024 – Agustus 2024</p>
+          </article>
         </div>
       </section>
 
@@ -265,7 +293,7 @@ export default function Home() {
               <span className="text-xs px-2 py-0.5 rounded-full border border-[var(--line)]">2024</span>
             </div>
             <p className="mb-1">Universitas Narotama</p>
-            <p className="text-sm">Publikasi, Desain & Dokumentasi</p>
+            <p className="text-sm text-[color:var(--text-desc)]">Publikasi, Desain & Dokumentasi</p>
           </article>
           <article className="card p-4">
           <div className="flex items-start justify-between gap-2">
@@ -273,7 +301,7 @@ export default function Home() {
             <span className="text-xs px-2 py-0.5 rounded-full border border-[var(--line)]">2024</span>
           </div>
           <p className="mb-1">Kelompok Bolodewo</p>
-          <p className="text-sm">Publikasi, Desain & Dokumentasi</p>
+          <p className="text-sm text-[color:var(--text-desc)]">Publikasi, Desain & Dokumentasi</p>
           </article>
           <article className="card p-4">
             <div className="flex items-start justify-between gap-2">
@@ -281,7 +309,7 @@ export default function Home() {
               <span className="text-xs px-2 py-0.5 rounded-full border border-[var(--line)]">2023</span>
             </div>
             <p className="mb-1">HIMA ILKOM</p>
-            <p className="text-sm">Ketua Pelaksana</p>
+            <p className="text-sm text-[color:var(--text-desc)]">Ketua Pelaksana</p>
           </article>
           <article className="card p-4">
             <div className="flex items-start justify-between gap-2">
@@ -289,7 +317,7 @@ export default function Home() {
               <span className="text-xs px-2 py-0.5 rounded-full border border-[var(--line)]">2023</span>
             </div>
             <p className="mb-1">Universitas Narotama</p>
-            <p className="text-sm">Koordinator Publikasi, Desain & Dokumentasi</p>
+            <p className="text-sm text-[color:var(--text-desc)]">Koordinator Publikasi, Desain & Dokumentasi</p>
           </article>
         </div>
       </section>
@@ -314,7 +342,7 @@ export default function Home() {
               <span className="text-xs px-2 py-0.5 rounded-full border border-[var(--line)]">2021–2025</span>
             </div>
             <p className="mb-1">Universitas Narotama</p>
-            <p className="text-sm">IPK 3.77</p>
+            <p className="text-sm text-[color:var(--text-desc)]">IPK 3.77</p>
           </article>
           <article className="card p-4">
             <div className="flex items-start justify-between gap-2">
@@ -322,7 +350,7 @@ export default function Home() {
               <span className="text-xs px-2 py-0.5 rounded-full border border-[var(--line)]">2023</span>
             </div>
             <p className="mb-1">Karier.mu by Sekolah.mu</p>
-            <p className="mt-1 text-sm">Magang dan Studi Independen Bersertifikat</p>
+            <p className="mt-1 text-sm text-[color:var(--text-desc)]">Magang dan Studi Independen Bersertifikat</p>
           </article>
           <article className="card p-4">
             <div className="flex items-start justify-between gap-2">
@@ -330,7 +358,7 @@ export default function Home() {
               <span className="text-xs px-2 py-0.5 rounded-full border border-[var(--line)]">2017–2020</span>
             </div>
             <p className="mb-1">SMK Negeri 1 Grati</p>
-            <p className="mt-1 text-sm">Nilai Rata-rata 80.66</p>
+            <p className="mt-1 text-sm text-[color:var(--text-desc)]">Nilai Rata-rata 80.66</p>
           </article>
         </div>
       </section>

@@ -5,6 +5,8 @@
   --bg: #ffffff;
   --bgElevated: #ffffff;
   --text: #0f172a; /* slate-900 untuk kontras light */
+  --text-desc: #1f2937;
+  --text-muted: #475569;   /* cukup gelap untuk kontras di light */
   --surface: #f6f7f8;
   --line: rgba(15, 23, 42, 0.08);
   --ring: rgba(154, 174, 155, 0.35);
@@ -19,6 +21,8 @@ html.dark {
   --bg: #1f2a36;
   --bgElevated: #233041;
   --text: #e8e8e8;
+  --text-desc: #e2e8f0;
+  --text-muted: #cbd5e1;   /* cukup terang untuk kontras di dark */
   --surface: #2e3c46;
   --accent: #9bae9b;
   --accent2: #7a9e9f;
@@ -276,7 +280,7 @@ html.dark .hero-sub {
   max-width: 48ch;
 }
 html.dark .hero-desc {
-  color: #cbd5e1;
+  color: #cbd5e1;  
 }
 
 .hero-blob {
