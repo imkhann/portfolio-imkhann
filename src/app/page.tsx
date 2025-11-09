@@ -169,65 +169,119 @@ export default function Home() {
             </p>
           </article>
 
-          {/* 2) Desain Grafis (poster + 2 feed IG) */}
+          {/* 2) Desain Grafis (poster + idc + feed IG) */}
           <article className="card p-4">
             <h4 className="font-heading font-semibold text-lg">Desain Grafis</h4>
 
-            {/* Preview besar, tiga karya */}
-            <div className="mt-3 grid grid-cols-1 md:grid-cols-3 gap-3">
-              <a href="/projects#design" className="group block overflow-hidden rounded-md border border-[var(--line)]">
-                <img
-                  src="/assets/portfolio/design-poster.webp"
-                  alt="Poster publikasi"
-                  className="w-full aspect-[3/4] object-cover transition-transform duration-200 group-hover:scale-[1.02]"
-                  loading="lazy"
-                  decoding="async"
-                />
+            {/* kunci: items-start agar semua kartu rata atas */}
+            <div className="mt-3 grid grid-cols-1 md:grid-cols-3 gap-3 items-start">
+              {/* Poster KPUM */}
+              <a
+                href="/projects#design"
+                className="group block overflow-hidden rounded-md border border-[var(--line)] self-start"
+                aria-label="Poster Pemilihan Umum Universitas Narotama (KPUM)"
+              >
+                <figure className="flex flex-col">
+                  <img
+                    src="/assets/img/portfolio/poster/kpum.webp"
+                    alt="Poster Pemilihan Umum Universitas Narotama (KPUM)"
+                    className="w-full aspect-[3/4] object-cover transition-transform duration-200 group-hover:scale-[1.02]"
+                    loading="lazy"
+                    decoding="async"
+                    sizes="(min-width: 768px) 33vw, 100vw"
+                  />
+                  <figcaption className="mt-2 text-[13px] md:text-sm leading-relaxed text-[color:var(--text-muted)]">
+                    Desain poster resmi Komisi Pemilihan Umum Mahasiswa (KPUM) Universitas Narotama 2024. Poster digunakan untuk membuka pendaftaran kandidat BEM dan Himpunan Mahasiswa.
+                  </figcaption>
+                </figure>
               </a>
-              <a href="/projects#design" className="group block overflow-hidden rounded-md border border-[var(--line)]">
-                <img
-                  src="/assets/portfolio/design-feed-1.webp"
-                  alt="Feed Instagram 1"
-                  className="w-full aspect-square object-cover transition-transform duration-200 group-hover:scale-[1.02]"
-                  loading="lazy"
-                  decoding="async"
-                />
+
+              {/* ID Card LKMM-TM*/}
+              <a
+                href="/projects#design"
+                className="group block overflow-hidden rounded-md border border-[var(--line)] self-start"
+                aria-label="Kartu Identitas Panitia LKMM-TM 2023"
+              >
+                <figure className="flex flex-col items-center">
+                  <img
+                    src="/assets/img/portfolio/idc/lkmm-tm.webp"
+                    alt="Desain ID Card Panitia LKMM-TM 2023"
+                    className="mx-auto w-[70%] md:w-[60%] aspect-[9/16] object-cover transition-transform duration-200 group-hover:scale-[1.02]"
+                    loading="lazy"
+                    decoding="async"
+                    sizes="(min-width: 768px) 20vw, 60vw"
+                  />
+                  <figcaption className="mt-2 text-[13px] md:text-sm leading-relaxed text-[color:var(--text-muted)] text-center">
+                    Kartu identitas panitia LKMM-TM 2023. Visual mengikuti identitas acara, bersih dan profesional untuk tanda pengenal panitia di lokasi acara.
+                  </figcaption>
+                </figure>
               </a>
-              <a href="/projects#design" className="group block overflow-hidden rounded-md border border-[var(--line)]">
-                <img
-                  src="/assets/portfolio/design-feed-2.webp"
-                  alt="Feed Instagram 2"
-                  className="w-full aspect-square object-cover transition-transform duration-200 group-hover:scale-[1.02]"
-                  loading="lazy"
-                  decoding="async"
-                />
+
+              {/* Feed IG KKN */}
+              <a
+                href="/projects#design"
+                className="group block overflow-hidden rounded-md border border-[var(--line)] self-start"
+                aria-label="Feed Instagram KKN Bolodewo"
+              >
+                <figure className="flex flex-col">
+                  <img
+                    src="/assets/img/portfolio/feed/igKKN.webp"
+                    alt="Feed Instagram KKN Bolodewo"
+                    className="w-full aspect-square object-cover transition-transform duration-200 group-hover:scale-[1.02]"
+                    loading="lazy"
+                    decoding="async"
+                    sizes="(min-width: 768px) 33vw, 100vw"
+                  />
+                  <figcaption className="mt-2 text-[13px] md:text-sm leading-relaxed text-[color:var(--text-muted)]">
+                    Desain feed Instagram KKN Bolodewo. Konten pengenalan tema, lokasi, dan filosofi logo dengan gaya modern dan konsisten.
+                  </figcaption>
+                </figure>
               </a>
             </div>
-
-            <p className="text-sm text-[color:var(--text-muted)] mt-3">
-              Poster dan konten sosial bergaya konsisten untuk kebutuhan publikasi dan brand awareness.
-            </p>
           </article>
 
-          {/* 3) Dokumentasi Video (1 preview saja) */}
+          {/* 3) Dokumentasi Video */}
           <article className="card p-4">
             <h4 className="font-heading font-semibold text-lg">Dokumentasi Video</h4>
 
-            <a href="/projects#video" className="group relative mt-3 block overflow-hidden rounded-md border border-[var(--line)]">
+            <a
+              href="/projects#video"
+              aria-label="After Movie KKN Bolodewo 2024"
+              className="group relative mt-3 block overflow-hidden rounded-md border border-[var(--line)] bg-black"
+            >
+              {/* Preview thumbnail */}
               <img
-                src="/assets/portfolio/video-shot-1.webp"
-                alt="Cuplikan dokumentasi video"
-                className="w-full aspect-[16/9] object-cover transition-transform duration-200 group-hover:scale-[1.02]"
+                src="/assets/img/portfolio/video/afterMovieKKN.webp"
+                alt="Cuplikan After Movie KKN Bolodewo 2024"
+                className="w-full aspect-video object-cover transition-transform duration-300 group-hover:scale-[1.02]"
                 loading="lazy"
                 decoding="async"
+                sizes="(min-width: 768px) 66vw, 100vw"
               />
-              <span className="pointer-events-none absolute right-2 top-2 rounded bg-black/65 px-1.5 py-0.5 text-[10px] text-white">
-                ▶ preview
-              </span>
+
+              {/* Overlay untuk kontras di light/dark */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/25 to-transparent" aria-hidden="true" />
+
+              {/* Tombol play pusat */}
+              <div className="absolute inset-0 grid place-items-center pointer-events-none">
+                <span className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-white/90 text-black text-xl font-semibold shadow transition-transform duration-200 group-hover:scale-105">
+                  ▶
+                </span>
+              </div>
+
+              {/* Judul + durasi */}
+              <div className="absolute left-3 right-3 bottom-3 flex items-end justify-between gap-3 pointer-events-none">
+                <div className="space-y-0.5">
+                  <p className="text-white text-sm font-semibold drop-shadow">After Movie KKN Bolodewo 2024</p>
+                  <p className="text-white/90 text-xs drop-shadow">Highlight kegiatan dari persiapan hingga penutupan</p>
+                </div>
+                <span className="shrink-0 rounded bg-black/75 px-1.5 py-0.5 text-[11px] text-white">6:09</span>
+              </div>
             </a>
 
-            <p className="text-sm text-[color:var(--text-muted)] mt-3">
-              Cuplikan dokumentasi kegiatan. Lihat versi lengkap dan detail proyek di halaman portfolio.
+            <p className="mt-3 text-sm text-[color:var(--text-muted)]">
+              Rangkuman kegiatan yang dilaksanakn selama program KKN Bolodewo 2024: pembukaan, pelaksanaan inti, dan penutupan. Peran mencakup
+              pengambilan gambar, penyuntingan, dan penyusunan narasi visual.
             </p>
           </article>
         </div>
