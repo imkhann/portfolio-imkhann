@@ -281,7 +281,7 @@ export default function Home() {
 
             <p className="mt-3 text-sm text-[color:var(--text-muted)]">
               Rangkuman kegiatan yang dilaksanakn selama program KKN Bolodewo 2024: pembukaan, pelaksanaan inti, dan penutupan. Peran mencakup
-              pengambilan gambar, penyuntingan, dan penyusunan narasi visual.
+              pengambilan gambar, editing, dan penyusunan narasi visual.
             </p>
           </article>
         </div>

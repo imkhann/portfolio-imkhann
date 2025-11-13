@@ -1,157 +1,120 @@
-# 🌐 Portfolio – Imam Muhannad
+# Portfolio – Imam Muhannad
 
-Proyek ini merupakan website **personal portfolio** yang dikembangkan menggunakan **Next.js** (React Framework) dengan **TypeScript** dan **Tailwind CSS**.  
-Website ini menampilkan profil, keahlian, pengalaman, pendidikan, serta proyek-proyek yang pernah dikerjakan oleh **Imam Muhannad** — seorang *Data Analyst • Web Developer • Visual Designer*.
+Website ini merupakan versi modern dari portfolio pribadi Imam Muhannad. Dibangun menggunakan Next.js dengan struktur modular agar mudah dikembangkan dan dikelola. Tujuannya adalah menampilkan pengalaman, keterampilan, serta hasil karya dengan tampilan profesional dan mudah diakses.
 
----
+## Struktur Proyek
 
-## ✨ Fitur Utama
-
-- **Tampilan Responsif**  
-  Desain menyesuaikan ukuran layar (mobile, tablet, desktop) dengan layout yang tetap rapi dan ringan.
-- **Navigasi Dinamis & Smooth Scrolling**  
-  Transisi antar section halus dan mudah diakses.
-- **Mode Tema (Light/Dark)**  
-  Pengguna dapat mengubah tema sesuai preferensi visual.
-- **Formulir Kontak Terintegrasi**  
-  Form dikirim melalui [Formspree](https://formspree.io), memudahkan pengunjung untuk menghubungi langsung.
-- **Ikon Sosial Interaktif**  
-  Termasuk LinkedIn, Instagram, Email, Telepon, WhatsApp, dan Telegram.
-- **Struktur Data Profesional**  
-  Section terorganisir: Tentang, Skills, Portfolio, Pengalaman, Organisasi, Pendidikan, dan Kontak.
-- **Optimasi Gambar Modern (WebP)**  
-  Gambar menggunakan format `.webp` agar ringan dan cepat dimuat.
-
----
-
-## 🧩 Teknologi yang Digunakan
-
-| Kategori | Teknologi |
-|-----------|------------|
-| **Framework Utama** | [Next.js 15+](https://nextjs.org/) |
-| **Bahasa Pemrograman** | TypeScript |
-| **Frontend Styling** | [Tailwind CSS](https://tailwindcss.com/) |
-| **Runtime Environment** | Node.js |
-| **Deployment** | [Vercel](https://vercel.com/) |
-| **Form Handling** | [Formspree](https://formspree.io) |
-
----
-
-## 🏗️ Struktur Proyek
-
-```
 portfolio-imkhann/
+│
 ├── public/
-│   ├── assets/
-│   │   └── img/
-│   │       ├── hero/
-│   │       │   └── imam-standing.webp
-│   │       └── icons/
-│   └── favicon.ico
+│ ├── assets/
+│ │ ├── css/style.css
+│ │ ├── js/main.js
+│ │ └── img/
+│ │ └── portfolio/
+│ │ ├── dashboard/
+│ │ ├── poster/
+│ │ ├── idc/
+│ │ ├── feed/
+│ │ └── video/
+│
 ├── src/
-│   ├── app/
-│   │   ├── page.tsx           # Halaman utama (Home)
-│   │   ├── globals.css        # Global style
-│   │   ├── layout.tsx         # Root layout Next.js
-│   │   └── components/        # Komponen tambahan (jika ada)
-│   └── styles/
-│       └── style.css
-├── .gitignore
-├── README.md
-├── next.config.mjs
-├── package.json
-└── tsconfig.json
-```
+│ ├── app/
+│ │ ├── layout.tsx
+│ │ ├── page.tsx
+│ │ └── globals.css
+│ └── components/
+│ ├── header.tsx
+│ └── footer.tsx
+│
+└── README.md
 
----
+## Instalasi
 
-## ⚙️ Cara Instalasi & Menjalankan Proyek
+1. Pastikan Node.js dan npm sudah terpasang.
+2. Clone repository:
+   ```bash
+   git clone https://github.com/imkhann/portfolio-imkhann.git
+   cd portfolio-imkhann
+   ```
+3. Instal dependensi:
+   ```bash
+   npm install
+   ```
+4. Jalankan mode pengembangan:
+   ```bash
+   npm run dev
+   ```
+   Lalu buka http://localhost:3000 di browser.
 
-### 1. Clone Repository
-```bash
-git clone https://github.com/username/portfolio-imkhann.git
-cd portfolio-imkhann
-```
-
-### 2. Install Dependencies
-Pastikan **Node.js LTS** sudah terpasang (disarankan versi ≥ 18).  
-Lalu jalankan:
-```bash
-npm install
-```
-
-### 3. Jalankan Server Development
-```bash
-npm run dev
-```
-Website akan tersedia di:  
-👉 `http://localhost:3000`
-
-### 4. Build untuk Produksi
+## Build dan Deploy
+Untuk build versi produksi:
 ```bash
 npm run build
+```
+Menjalankan hasil build:
+```bash
 npm start
 ```
+Deploy manual ke GitHub:
+```bash
+git add -A
+git commit -m "update portfolio"
+git push origin main
+```
+Versi produksi dideploy menggunakan Vercel.
 
----
+## Teknologi yang Digunakan
+- Next.js 15 (App Router)
+- Tailwind CSS untuk layout dan utilitas
+- Font Inter dan Montserrat dari Google Fonts
+- JavaScript tambahan melalui main.js
+- Hosting dan build otomatis di Vercel
 
-## 🚀 Deployment ke Vercel
+## Komponen Utama
+### layout.tsx
+Mengatur struktur global halaman, memanggil Header dan Footer, serta memuat font dan script global.
 
-1. Buat akun di [Vercel](https://vercel.com/).  
-2. Hubungkan repository GitHub kamu.  
-3. Vercel akan otomatis mendeteksi proyek Next.js dan melakukan deployment.  
-4. Setelah proses selesai, website akan bisa diakses melalui domain:  
-   ```
-   https://portfolio-imkhann.vercel.app
-   ```
+### header.tsx
+Navigasi utama situs dengan tautan menuju setiap bagian halaman. Termasuk kontrol tema terang/gelap dan drawer menu untuk tampilan seluler.
 
----
+### footer.tsx
+Bagian penutup halaman dengan tautan unduhan CV dan navigasi kembali ke bagian atas halaman.
 
-## 📄 Struktur Halaman
+## Section Halaman
+### Hero
+Menampilkan nama, profesi, dan pengantar singkat tentang Imam Muhannad.
 
-| Section | Deskripsi |
-|----------|------------|
-| **Home** | Menampilkan nama, deskripsi singkat, dan foto. |
-| **Tentang Saya** | Cerita singkat mengenai latar belakang dan minat di bidang teknologi, data, serta visual. |
-| **Skills** | Menampilkan daftar kemampuan teknis dan pendukung yang relevan. |
-| **Portfolio** | Proyek-proyek pilihan yang menunjukkan hasil kerja dan keahlian. |
-| **Pengalaman** | Riwayat pengalaman kerja dan magang. |
-| **Organisasi** | Kegiatan organisasi dan posisi yang pernah diemban. |
-| **Pendidikan** | Latar belakang akademik dan pelatihan profesional. |
-| **Kontak** | Formulir pesan dan tautan sosial (LinkedIn, Instagram, Email, Telepon, WhatsApp, Telegram). |
+### Tentang Saya
+Berisi ringkasan perjalanan dan ketertarikan dalam teknologi, analisis data, dan desain visual.
 
----
+### Skills
+Menampilkan keahlian teknis dan pendukung dalam empat kategori utama: analisis data, pengembangan web, desain visual, dan soft skills.
 
-## 🎨 Desain & UX
+### Portfolio
+Menampilkan tiga kategori karya utama:
 
-Website ini dibuat dengan pendekatan minimalis dan fokus pada **keterbacaan, hierarki visual, serta kesederhanaan interaksi**.  
-Setiap elemen menggunakan sistem **Tailwind utility class** agar performa tetap cepat tanpa file CSS besar.
+#### Dashboard Analitik
+Cuplikan dashboard dari proyek skripsi “Pengembangan Business Intelligence Dashboard untuk Deteksi Anomali Pola Konsumsi Air dengan Isolation Forest”. Dashboard ini menampilkan analisis pola konsumsi air, deteksi anomali, dan visualisasi interaktif berbasis business intelligence.
 
----
+#### Desain Grafis
+Beberapa karya visual dari kegiatan organisasi:
+- Poster KPUM 2024 sebagai media publikasi pendaftaran calon BEM dan HIMA.
+- ID Card LKMM-TM 2023 digunakan sebagai identitas panitia acara.
+- Feed Instagram KKN Bolodewo untuk publikasi kegiatan sosial universitas.
 
-## 💡 Tujuan Proyek
+#### Dokumentasi Video
+Preview After Movie KKN Bolodewo yang merangkum seluruh kegiatan KKN dari awal hingga penutupan.
 
-Portfolio ini dibuat sebagai:
-- Representasi profesional dari kemampuan Imam Muhannad di bidang *Data Analysis, Web Development, dan Visual Design*.
-- Media untuk menampilkan proyek, pengalaman, dan hasil karya secara interaktif.
-- Bukti kemampuan mengimplementasikan framework modern dalam pengembangan web.
+### Pengalaman Organisasi
+Menampilkan daftar organisasi dan peran aktif dalam bidang publikasi, desain, serta dokumentasi.
 
----
+### Pendidikan
+Riwayat pendidikan dari SMK hingga perguruan tinggi, termasuk partisipasi dalam program MSIB Data Analyst.
 
-## 👤 Profil Pembuat
+### Kontak
+Berisi tautan langsung ke LinkedIn, Instagram, WhatsApp, Telegram, dan email resmi.
 
-**Imam Muhannad**  
-Data Analyst • Web Developer • Visual Designer  
-📍 Surabaya, Indonesia  
-📧 [imammuhannad.gg@gmail.com](mailto:imammuhannad.gg@gmail.com)  
-🔗 [LinkedIn](https://www.linkedin.com/in/imam-muhannad/) | [Instagram](https://instagram.com/imkhann_) | [Telegram](https://t.me/imkhann)
-
----
-
-## 🪪 Lisensi
-
-Proyek ini dilisensikan di bawah **MIT License** — bebas digunakan dan dimodifikasi dengan tetap mencantumkan kredit pembuat asli.
-
----
-
-> “Menggabungkan data, desain, dan teknologi untuk menghadirkan karya visual yang informatif, fungsional, dan mudah dipahami.”
+## Lisensi
+Seluruh kode berada di bawah lisensi MIT.
+Semua gambar, desain, dan video merupakan karya pribadi Imam Muhannad dan tidak diperkenankan digunakan ulang tanpa izin.
