@@ -204,7 +204,7 @@ export default function Home() {
               >
                 <figure className="flex flex-col items-center">
                   <img
-                    src="/assets/img/portfolio/idc/lkmm-tm.webp"
+                    src="/assets/img/portfolio/idc/lkmmTm.webp"
                     alt="Desain ID Card Panitia LKMM-TM 2023"
                     className="mx-auto w-[70%] md:w-[60%] aspect-[9/16] object-cover transition-transform duration-200 group-hover:scale-[1.02]"
                     loading="lazy"
