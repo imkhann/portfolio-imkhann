@@ -173,7 +173,7 @@ export default function ProjectsPage() {
             <h2 className="font-heading text-2xl md:text-3xl font-bold">Dashboard</h2>
           </div>
           <p className="mt-2 text-sm text-[color:var(--text-muted)]">
-            Tiga dashboard interaktif. Ukuran penuh untuk pengalaman baca dan eksplorasi yang maksimal.
+            Beberapa dashboard interaktif yang dibuat menggunakan Tableau. Ukuran penuh untuk pengalaman baca dan eksplorasi yang maksimal.
           </p>
         </div>
 
