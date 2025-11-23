@@ -17,7 +17,6 @@ export default function DashboardSection() {
             strokeLinejoin="round"
             aria-hidden="true"
           >
-            {/* Ikon analitik: bar + trend line */}
             <path d="M4 20h16" />
             <rect x="5" y="12" width="3" height="6" rx="1" />
             <rect x="10.5" y="9" width="3" height="9" rx="1" />
@@ -32,9 +31,8 @@ export default function DashboardSection() {
           </h2>
         </div>
         <p className="mt-2 text-sm text-[color:var(--text-muted)]">
-          Beberapa dashboard interaktif yang dibuat menggunakan Tableau. Ukuran
-          lebar dengan fokus pada keterbacaan dan eksplorasi insight secara
-          nyaman.
+          Beberapa dashboard interaktif yang dibuat menggunakan Tableau dengan
+          layout desktop tetap untuk menjaga komposisi visual dan keterbacaan.
         </p>
       </div>
 
@@ -42,11 +40,29 @@ export default function DashboardSection() {
         <div className="space-y-10 max-w-[1400px] mx-auto">
           {/* 1) Dashboard Isolation Forest */}
           <article>
-            <h3 className="font-heading font-semibold text-lg mb-2">
+            <h3 className="font-heading font-semibold text-lg mb-3">
               Business Intelligence Dashboard Deteksi Anomali Pola Konsumsi Air
               (Isolation Forest)
             </h3>
-            <div id="viz1" className="overflow-x-auto"></div>
+
+            {/* wrapper scroll horizontal di layar kecil */}
+            <div className="overflow-x-auto rounded-md border border-[var(--line)] bg-[var(--surface)]">
+              <div
+                className="relative"
+                style={{ width: 1000, height: 827 }}
+              >
+                <iframe
+                  src="https://public.tableau.com/views/BusinessIntelligenceDashboardDeteksiAnomaliPolaKonsumsiAirmenggunakanIsoaltionForest_17629204939610/DashboardKonsumsidanTagihanAIr?:showVizHome=no&:toolbar=no&:embed=true"
+                  width={1000}
+                  height={827}
+                  className="block"
+                  frameBorder={0}
+                  scrolling="no"
+                  title="Dashboard Konsumsi dan Tagihan Air"
+                />
+              </div>
+            </div>
+
             <p className="text-sm text-[color:var(--text-muted)] mt-3">
               Dashboard ini memberikan gambaran menyeluruh mengenai pola
               konsumsi air pelanggan dari berbagai wilayah dalam satu periode
@@ -72,11 +88,27 @@ export default function DashboardSection() {
 
           {/* 2) Dashboard Praktik BI Modul 5 */}
           <article>
-            <h3 className="font-heading font-semibold text-lg mb-2">
-              Dashboard Praktik Business Intelligence – Modul 5 Eksplorasi
-              Metrik Penjualan
+            <h3 className="font-heading font-semibold text-lg mb-3">
+              Dashboard Praktik Business Intelligence – Modul 5
             </h3>
-            <div id="viz2" className="overflow-x-auto"></div>
+
+            <div className="overflow-x-auto rounded-md border border-[var(--line)] bg-[var(--surface)]">
+              <div
+                className="relative"
+                style={{ width: 1169, height: 877 }}
+              >
+                <iframe
+                  src="https://public.tableau.com/views/ImamMuhannad__Kelompok3_Praktik1_Modul5/Dashboard?:showVizHome=no&:toolbar=no&:embed=true"
+                  width={1169}
+                  height={877}
+                  className="block"
+                  frameBorder={0}
+                  scrolling="no"
+                  title="Dashboard Praktik BI Modul 5"
+                />
+              </div>
+            </div>
+
             <p className="text-sm text-[color:var(--text-muted)] mt-3">
               Dashboard ini menyajikan analisis operasional dari sebuah studi
               kasus yang menekankan pemahaman terhadap performa bisnis melalui
@@ -101,11 +133,27 @@ export default function DashboardSection() {
 
           {/* 3) Dashboard Final Project Kelompok 3C */}
           <article>
-            <h3 className="font-heading font-semibold text-lg mb-2">
-              Dashboard Final Project – Kelompok 3C Performa Produk &amp;
-              Segmentasi
+            <h3 className="font-heading font-semibold text-lg mb-3">
+              Dashboard Final Project – Kelompok 3C
             </h3>
-            <div id="viz3" className="overflow-x-auto"></div>
+
+            <div className="overflow-x-auto rounded-md border border-[var(--line)] bg-[var(--surface)]">
+              <div
+                className="relative"
+                style={{ width: 1169, height: 877 }}
+              >
+                <iframe
+                  src="https://public.tableau.com/views/Kelompok3CFinproproject2_17630035054610/Dashboard1?:showVizHome=no&:toolbar=no&:embed=true"
+                  width={1169}
+                  height={877}
+                  className="block"
+                  frameBorder={0}
+                  scrolling="no"
+                  title="Dashboard Final Project Kelompok 3C"
+                />
+              </div>
+            </div>
+
             <p className="text-sm text-[color:var(--text-muted)] mt-3">
               Dashboard ini merupakan hasil integrasi analisis data dalam skala
               proyek akhir yang menekankan penyajian visualisasi komprehensif

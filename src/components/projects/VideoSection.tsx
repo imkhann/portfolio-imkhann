@@ -222,7 +222,7 @@ export default function VideoSection() {
             src="https://drive.google.com/file/d/1PMqXJysaDvj_NViSEvNIueFnshAtFSJ1/preview"
             title="Video Ekspedisi Paguyuban KIP-K"
             allow="autoplay"
-            allowFullScreen={false}
+            allowFullScreen={true}
           />
           <p className="text-sm text-[color:var(--text-muted)] mt-3">
             Video ekspedisi Paguyuban KIP-K yang menampilkan rangkuman aktivitas
