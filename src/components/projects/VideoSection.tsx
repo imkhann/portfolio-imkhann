@@ -95,7 +95,7 @@ export default function VideoSection() {
               src="https://drive.google.com/file/d/177phLwL_WJ93hkPYQi01cJNWj-OGqVJj/preview"
               title="Video Dokumentasi KKN 1"
               allow="autoplay"
-              allowFullScreen={false}
+              allowFullScreen={true}
             />
             <p className="text-sm text-[color:var(--text-muted)]">
               Dokumentasi tambahan KKN yang menampilkan detail pelaksanaan
@@ -109,7 +109,7 @@ export default function VideoSection() {
               src="https://drive.google.com/file/d/15AEVGkwbq4eO54aZbtqRLeINXQ_sws8H/preview"
               title="Video Dokumentasi KKN 2"
               allow="autoplay"
-              allowFullScreen={false}
+              allowFullScreen={true}
             />
             <p className="text-sm text-[color:var(--text-muted)]">
               Konten video salah satu UMKM, yang menampilkan proses pembuatan
@@ -202,7 +202,7 @@ export default function VideoSection() {
             src="https://drive.google.com/file/d/1vqCCkb0JmZoYgUqiXB9jP_5xfB-uuzgP/preview"
             title="Video LKMM-TD"
             allow="autoplay"
-            allowFullScreen={false}
+            allowFullScreen={true}
           />
           <p className="text-sm text-[color:var(--text-muted)] mt-3">
             Dokumentasi kegiatan Latihan Keterampilan Manajemen Mahasiswa
@@ -243,7 +243,7 @@ export default function VideoSection() {
             src="https://drive.google.com/file/d/1TNNOtdAGDyU4Sm6QS6oUJRjbOgnTnV42/preview"
             title="Video Testimoni KIP-K"
             allow="autoplay"
-            allowFullScreen={false}
+            allowFullScreen={true}
           />
           <p className="text-sm text-[color:var(--text-muted)] mt-3">
             Merupakan video tugas untuk testimoni saya sebagai kip-k di
