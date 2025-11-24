@@ -1,120 +1,116 @@
-# Portfolio – Imam Muhannad
+# Portfolio Website – Imam Muhannad
 
-Website ini merupakan versi modern dari portfolio pribadi Imam Muhannad. Dibangun menggunakan Next.js dengan struktur modular agar mudah dikembangkan dan dikelola. Tujuannya adalah menampilkan pengalaman, keterampilan, serta hasil karya dengan tampilan profesional dan mudah diakses.
+Repository ini berisi website portfolio lengkap yang dirancang sebagai representasi profesional dari kompetensi dalam pengembangan web, analisis data, desain visual, serta pengalaman organisasi dan kegiatan kampus. Website ini dibangun sebagai pusat informasi terstruktur yang memudahkan siapa pun menilai kemampuan teknis maupun kreativitas secara langsung melalui karya nyata yang ditampilkan.
 
-## Struktur Proyek
+Seluruh halaman dan komponen visual dirancang agar memiliki alur yang konsisten dan mudah dinavigasi. Fokus utama situs ini adalah menampilkan karya dan pengalaman secara jujur, rapi, dan jelas, bukan sekadar menonjolkan tampilan.
 
-portfolio-imkhann/
-│
-├── public/
-│ ├── assets/
-│ │ ├── css/style.css
-│ │ ├── js/main.js
-│ │ └── img/
-│ │ └── portfolio/
-│ │ ├── dashboard/
-│ │ ├── poster/
-│ │ ├── idc/
-│ │ ├── feed/
-│ │ └── video/
-│
-├── src/
-│ ├── app/
-│ │ ├── layout.tsx
-│ │ ├── page.tsx
-│ │ └── globals.css
-│ └── components/
-│ ├── header.tsx
-│ └── footer.tsx
-│
-└── README.md
+---
 
-## Instalasi
+## Teknologi Utama
 
-1. Pastikan Node.js dan npm sudah terpasang.
-2. Clone repository:
-   ```bash
-   git clone https://github.com/imkhann/portfolio-imkhann.git
-   cd portfolio-imkhann
-   ```
-3. Instal dependensi:
-   ```bash
-   npm install
-   ```
-4. Jalankan mode pengembangan:
-   ```bash
-   npm run dev
-   ```
-   Lalu buka http://localhost:3000 di browser.
+### Next.js 15 (App Router)
 
-## Build dan Deploy
-Untuk build versi produksi:
-```bash
-npm run build
-```
-Menjalankan hasil build:
-```bash
-npm start
-```
-Deploy manual ke GitHub:
-```bash
-git add -A
-git commit -m "update portfolio"
-git push origin main
-```
-Versi produksi dideploy menggunakan Vercel.
+Menjadi fondasi arsitektur website. Struktur App Router dimanfaatkan untuk efisiensi routing, performa, dan pembagian komponen client/server yang terukur.
 
-## Teknologi yang Digunakan
-- Next.js 15 (App Router)
-- Tailwind CSS untuk layout dan utilitas
-- Font Inter dan Montserrat dari Google Fonts
-- JavaScript tambahan melalui main.js
-- Hosting dan build otomatis di Vercel
+### React Components
 
-## Komponen Utama
-### layout.tsx
-Mengatur struktur global halaman, memanggil Header dan Footer, serta memuat font dan script global.
+Semua elemen dibangun dengan pendekatan modular. Komponen seperti header, navbar, drawer, footer, gallery grid, dan komponen embed digunakan ulang untuk menjaga konsistensi visual dan memudahkan pemeliharaan.
 
-### header.tsx
-Navigasi utama situs dengan tautan menuju setiap bagian halaman. Termasuk kontrol tema terang/gelap dan drawer menu untuk tampilan seluler.
+### TailwindCSS + Custom CSS
 
-### footer.tsx
-Bagian penutup halaman dengan tautan unduhan CV dan navigasi kembali ke bagian atas halaman.
+Tailwind digunakan sebagai sistem styling utama untuk kecepatan dan kemudahan skalabilitas. Beberapa animasi dan interaksi UI tetap memakai custom CSS untuk mempertahankan gaya visual yang sudah direncanakan dari awal.
 
-## Section Halaman
-### Hero
-Menampilkan nama, profesi, dan pengantar singkat tentang Imam Muhannad.
+### Embed Interaktif
 
-### Tentang Saya
-Berisi ringkasan perjalanan dan ketertarikan dalam teknologi, analisis data, dan desain visual.
+Website ini menampilkan berbagai konten eksternal tanpa mengorbankan proporsi media asli, termasuk:
 
-### Skills
-Menampilkan keahlian teknis dan pendukung dalam empat kategori utama: analisis data, pengembangan web, desain visual, dan soft skills.
+* Tableau Public untuk dashboard data interaktif
+* YouTube video player
+* Instagram Reels dan Feed
+* Google Drive video preview
 
-### Portfolio
-Menampilkan tiga kategori karya utama:
+---
 
-#### Dashboard Analitik
-Cuplikan dashboard dari proyek skripsi “Pengembangan Business Intelligence Dashboard untuk Deteksi Anomali Pola Konsumsi Air dengan Isolation Forest”. Dashboard ini menampilkan analisis pola konsumsi air, deteksi anomali, dan visualisasi interaktif berbasis business intelligence.
+## Struktur Halaman Utama
 
-#### Desain Grafis
-Beberapa karya visual dari kegiatan organisasi:
-- Poster KPUM 2024 sebagai media publikasi pendaftaran calon BEM dan HIMA.
-- ID Card LKMM-TM 2023 digunakan sebagai identitas panitia acara.
-- Feed Instagram KKN Bolodewo untuk publikasi kegiatan sosial universitas.
+### 1. Home (Landing Page)
 
-#### Dokumentasi Video
-Preview After Movie KKN Bolodewo yang merangkum seluruh kegiatan KKN dari awal hingga penutupan.
+Menampilkan identitas singkat, bidang keahlian utama, navigasi cepat, dan hero section untuk memberikan gambaran profesional sejak tampilan pertama.
 
-### Pengalaman Organisasi
-Menampilkan daftar organisasi dan peran aktif dalam bidang publikasi, desain, serta dokumentasi.
+### 2. Tentang Saya
 
-### Pendidikan
-Riwayat pendidikan dari SMK hingga perguruan tinggi, termasuk partisipasi dalam program MSIB Data Analyst.
+Ringkasan latar belakang dan pendekatan kerja, ditulis untuk memberi konteks terhadap kemampuan yang ditampilkan pada halaman portfolio.
 
-### Kontak
-Berisi tautan langsung ke LinkedIn, Instagram, WhatsApp, Telegram, dan email resmi.
+### 3. Skills
 
-## Lisensi
-Seluruh kode berada di bawah lisensi MIT.
-Semua gambar, desain, dan video merupakan karya pribadi Imam Muhannad dan tidak diperkenankan digunakan ulang tanpa izin.
+Daftar keahlian yang dikategorikan meliputi:
+
+* Analisis dan visualisasi data
+* Frontend development
+* Desain grafis
+* Business Intelligence
+* Publikasi dokumen visual
+
+### 4. Portfolio (Projects Page)
+
+Halaman pusat portofolio dengan tiga kategori utama:
+
+#### a. Dashboard Analytics (Tableau)
+
+Tiga dashboard interaktif ditampilkan dalam ukuran full layout desktop agar tetap akurat secara komposisi dan analisis:
+
+* Dashboard analisis konsumsi dan tagihan air (Isolation Forest)
+* Dashboard modul praktikum
+* Dashboard final project kelompok
+
+#### b. Desain Grafis
+
+Konten desain dikelompokkan berdasarkan jenis publikasinya:
+
+* Feed Instagram kampus
+* Carousel LKMM
+* Feed proyek pribadi
+* Story IG
+* Poster
+* Banner
+* ID Card
+* Sertifikat kegiatan
+
+Semua ditampilkan menggunakan ukuran asli dan tidak dipaksakan responsif penuh.
+
+#### c. Video Dokumentasi
+
+Kumpulan dokumentasi video acara dan kegiatan kampus:
+
+* Reel Instagram
+* After Movie KKN
+* Dokumentasi kegiatan internal
+* Preview Google Drive
+* Video publikasi resmi
+
+### 5. Pengalaman
+
+Menampilkan pengalaman organisasi, kepanitiaan, program kegiatan, dan kontribusi nyata dalam event kampus yang disusun dalam format timeline.
+
+### 6. Organisasi
+
+Menampilkan riwayat jabatan dan kontribusi dalam organisasi mahasiswa yang dianggap relevan dengan kompetensi profesional.
+
+### 7. Contact
+
+Halaman sederhana untuk menghubungi pemilik portfolio dengan menyediakan email dan tautan media sosial.
+
+### 8. Navigasi & UI Interaktif
+
+Memanfaatkan header fixed, drawer mobile custom, theme switcher (light/dark), dan interaksi UI yang sudah disesuaikan untuk pengalaman penggunaan yang familiar.
+
+---
+
+## Tujuan Proyek
+
+Website ini dibangun untuk menjadi:
+
+* Portofolio profesional yang layak untuk kebutuhan lamaran kerja maupun presentasi formal
+* Dokumentasi terpusat karya visual dan teknis agar mudah dievaluasi oleh HR, dosen, atau klien
+* Contoh implementasi Next.js modern dalam pembuatan portfolio tingkat lanjut
+* Platform yang menunjukkan kompetensi lintas bidang secara terstruktur dan terbuka
