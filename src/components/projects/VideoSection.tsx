@@ -231,6 +231,26 @@ export default function VideoSection() {
             Somber Kecamatan Tambelangan Kabupaten Sampang.
           </p>
         </article>
+        
+        {/* Video Profile UKKI 2023 */}
+        <article className="card p-4">
+          <h3 className="font-heading font-semibold text-lg mb-2">
+            Video Profile UKKI 2023
+          </h3>
+
+          <VideoEmbedFrame
+            platform="drive"
+            src="https://drive.google.com/file/d/1NlBc9UtH1T76o5XQBPNg4fGSvSigcMCg/preview"
+            title="Video Profile UKKI 2023"
+            allow="autoplay"
+            allowFullScreen={true}
+          />
+          <p className="text-sm text-[color:var(--text-muted)] mt-3">
+            Video profile Unit Kegiatan Kerohanian Islam (UKKI) Universitas
+            Narotama tahun 2023 yang menampilkan berbagai aktivitas atau kegiatan
+            yang dilakukan oleh anggota UKKI sekaligus memprosikan UKKI itu sendiri.
+          </p>
+        </article>
 
         {/* Video Testimoni KIP-K */}
         <article className="card p-4">
